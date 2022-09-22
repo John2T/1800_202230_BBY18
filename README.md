@@ -8,7 +8,7 @@
 This browser based web application to ...
 * Hi my name is Yeju. I'm excited about this project because it is the first time doing project with people together.
 *Hi my name is Nain. I'm excited about this project because I love Java.
-* Greetings this is John!
+* Greetings this is John! 2nd Time.
 	
 ## Technologies
 Technologies used for this project:
