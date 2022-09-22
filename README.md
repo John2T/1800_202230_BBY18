@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+* Greetings this is John!
 	
 ## Technologies
 Technologies used for this project:
