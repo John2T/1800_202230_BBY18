@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+* Hi my name is Yeju. I'm excited about this project because it is the first time doing project with people together.
 	
 ## Technologies
 Technologies used for this project:
