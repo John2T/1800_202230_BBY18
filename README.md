@@ -6,7 +6,7 @@
 
 ## General Info
 This browser based web application to ...
-*Hi my name is Nain. I'm excited about this project because I love Java.
+* Hi my name is Nain. I'm excited about this project because I love Java. VERY MUCH!
 * Greetings this is John!
 	
 ## Technologies
