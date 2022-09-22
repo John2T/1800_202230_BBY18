@@ -7,6 +7,7 @@
 ## General Info
 This browser based web application to ...
 *Hi my name is Nain. I'm excited about this project because I love Java.
+* Greetings this is John!
 	
 ## Technologies
 Technologies used for this project:
