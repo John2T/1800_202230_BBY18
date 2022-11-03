@@ -1,0 +1,23 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+div .col-head {
+    text-align: center;
+    border: rgb(181, 177, 177) 1px solid;
+}
+
+div .col {
+    text-align: center;
+    border: rgb(181, 177, 177) 0.5px solid;
+}
+
+
+.container a {
+    background-color: rgba(76, 138, 205, 0.1);
+}
