@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--WORK IN Progress-->
 <head>
     <title>My BCIT Project</title>
     <meta name="comp1800 template" content="My 1800 App">
@@ -21,11 +20,22 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
-    
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
     <!-------------------------------------------------------->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>  -->
+    <!-- <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" /> -->
 
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
@@ -43,42 +53,27 @@
     <!-- our own navbar goes here -->
     <nav class="navbar navbar-light bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand text-light">Team18</a>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
+          <a class="navbar-brand text-light">Team 18</a>
+          
         </div>
       </nav>
 
-
     <!-- the body of your page goes here -->
     <!-- stuff -->
-    <nav class="navbar bg-light">
-        <form class="container-fluid justify-content-center">
-          <h3>Settings</h3>
-        </form>
-      </nav>
-      <div class="list-group">
-        <a href="" class="list-group-item list-group-item-action">General</a>
-        <a href="#" class="list-group-item list-group-item-action">Account</a>
-        <a href="Notifications.html" class="list-group-item list-group-item-action">Notifications</a>
-        <a href="#" class="list-group-item list-group-item-action">Look and Appearance</a>
-      </div>
+    <div class="container">
+        <h1>Let's Login!</h1>
+    </div>
+    <div id="firebaseui-auth-container"></div>
 
     <!-- our own footer goes here-->
-    <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
-      <span class="material-icons"><a href="home.html"><img src = "./images/home_FILL0_wght400_GRAD0_opsz48.png"></a></span>
-      <span class="material-icons"><a href="timetable.html"><img src = "./images/calendar_month_FILL0_wght400_GRAD0_opsz48.png"></a></span>
-      <span class="material-icons"><a href="duedate.html"><img src="./images/duedate2.png"></a></span>
-      <span class="material-symbols-outlined"><a href="account.html"><img src = "./images/person_FILL0_wght400_GRAD0_opsz48.png"></a></span>
-    </footer>
+    <nav id="footerPlaceholder"></nav>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_TEAM18.js"></script>
     <script src="./scripts/authentication.js"></script>
+    
 
 </body>
 
