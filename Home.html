@@ -42,8 +42,11 @@
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    
+    <!--Tailwind css library-->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+   
 
 </head>
 
@@ -54,66 +57,127 @@
 
     <!-- our own navbar goes here -->
     <!--IMPORTANT hamburger menu not displaying properly-->
+    
     <nav class="navbar navbar-light bg-primary">
       <div class = "d-inline-flex p-2 bd-highlight">
-        <div class="container-fluid justify-content-start">
+        <div class="container-fluid">
           <a class="navbar-brand text-light">Team18</a>
         </div>
       </div>
-        <div class = "d-inline-flex p-2 bd-highlight">
-          <form class="d-flex justify-content-end">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-              </svg>
-            </a>
+      <div class = "d-inline-flex p-2 bd-highlight">
+        <form class="d-inline-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
 
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <!--White Space-->
+        <p> &nbsp; </p>
+
+        <div class="btn-group dropdown">
+          <button class="btn btn-secondary dropdown-toggle d-inline-flex p-2 bd-highlight" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </button>
+        
+            <ul class="dropdown-menu dropdown-menu-end"   role="menu" aria-labelledby="dropdownMenuLink">
+              <div class = "justify-content-evenly">
                 <li><a class="dropdown-item" href="Settings.html">Settings</a></li>
                 <li><a class="dropdown-item" href="#">About</a></li>
                 <li><a class="dropdown-item" href="#">Help</a></li>
-              </ul>
-          </div>
+              </div>
+            </ul>  
+  
+        </div>
       </nav>
+
+            
+          
+
+           
+
+            
+    
 
 
     <!-- the body of your page goes here -->
     <!-- stuff -->
-    <nav class="navbar bg-light">
-      <form class="container-fluid justify-content-center">
-        <h3>To-Do List</h3>
-      </form>
-    </nav>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Course</th>
-          <th scope="col">Task</th>
-          <th scope="col">Due Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Comp 1510</th>
-          <td>Lab 1</td>
-          <td>November 1,2022</td>
-        </tr>
-        <tr>
-          <th scope="row">Comp 1234</th>
-          <td>Lab 2</td>
-          <td>November 1,2022</td>
-        </tr>
-        <tr>
-          <th scope="row">Comp 1234</th>
-          <td>Lab 3</td>
-          <td>November 1,2022 </td>
-        </tr>
-      </tbody>
-    </table>
+
+     <!--White Space-->
+     <p> &nbsp; </p>
+
+     <article class="container border bg-blue-50 border-blue-100 shadow-2xl rounded-2xl p-3 flex-auto" >
+      <h1 class="font-bold text-blue-500 text-center">Time Here</h1>
+    </article>
+
+    <p> &nbsp; </p>
+
+    <article class="container border bg-blue-50 border-blue-100 shadow-2xl rounded-2xl p-3 flex-auto" >
+      <h1 class="font-bold text-blue-500">Upcoming</h1>
+      <p class="font-light text-black">Upcoming class here</p>
+      <h2 class="text-sm text-black mb-5">Class info?</h2>
+      <p class = "font-bold  text-blue-600 text-center">"Fun" Message</p>    
+    </article>
+
+
     
+
+     <!--White Space-->
+     <p> &nbsp; </p>
+
+    <article class="container bg-blue-50 shadow-2xl rounded-2xl p-2 flex-auto">
+      <h1 class="font-bold text-blue-500">Current</h1>
+      <p class="font-light text-black" >Currentclass here</p>
+      <h6 class="text-sm text-black mb-5">Class info?</h6>
+    </article>
+  
+    <p> &nbsp; </p>
+    
+
+<!-- component -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+<style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
+
+<div class="min-w-screen min-h-screen bg-blue-50 shadow-2xl rounded-2xl p-2 flex-auto">
+    <div class="w-full mx-auto rounded-lg border border-black text-blue-500 "style="max-width: 800px" x-data="app()" x-init="addItem()">
+        <div class="mb-10">
+            <h1 class="text-2xl font-bold flex-auto">To-Do</h1>
+        </div>
+        <div class="mb-10">
+            <template x-if="todos.length">
+                <ul @click.away="defocusItems()" class="-mx-1">
+                    <template x-for="(item,index) in todos">
+                        <li @click="focusItem(index)" @dblclick="openItem(index)" class="px-2 py-2 rounded transition-all flex text-md" :class="{'bg-blue-500':item.focused,'bg-blue-50 shadow-lg px-4 py-4 my-10 -mx-2':item.open,'mb-1 cursor-pointer':!item.open}" :key="index">
+                            <div class="flex-none w-10 leading-none">
+                                <input type="checkbox" :checked="item.checked" @click="item.checked=!item.checked">
+                            </div>
+                            <div class="flex-grow max-w-full">
+                                <div class="w-full leading-none">
+                                    <h3 class="text-md leading-none truncate w-full pr-10" :class="item.title.length?'text-black':'text-gray-500'" x-text="item.title||'New todo...'" x-show="!item.open"></h3>
+                                    <input type="text" x-show="item.open" class="text-md w-full bg-transparent text-black leading-none focus:outline-none mb-2" x-model="item.title" :id="`titleField${index}`" placeholder="New todo..."/>
+                                </div>
+                                <div class="w-full" x-show="item.open">
+                                    <textarea class="text-md w-full bg-transparent text-black leading-tight focus:outline-none" rows="10" x-model="item.notes" placeholder="Notes"></textarea>
+                                </div>
+                                <div class="w-full flex justify-end" x-show="item.open">
+                                    <button class="p-1 -mr-1 focus:outline-none hover:text-black" @click="removeItem(index)"><i class="mdi mdi-trash-can-outline"></i></button>
+                                </div>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            <template x-if="!todos.length">
+                <p class="text-black">No todos</p>
+            </template>
+        </div>
+        <div class="flex justify-center">
+            <button class="py-1 px-10 border border-black hover:text-black rounded leading-none focus:outline-none text-xl" @click="addItem()"><i class="mdi mdi-plus"></i></button>
+        </div>
+    </div>
+</div>
+
+<script src = "./scripts/home.js"></script>
 
     <!-- our own footer goes here-->
     <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
