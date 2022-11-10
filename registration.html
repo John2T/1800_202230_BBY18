@@ -41,11 +41,11 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
-<body>
+<body>  
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
@@ -54,19 +54,54 @@
     <nav class="navbar navbar-light bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand text-light">Team 18</a>
-          
         </div>
-      </nav>
+    </nav>
 
     <!-- the body of your page goes here -->
     <!-- stuff -->
-    <div class="container">
-        <h1>Let's Login!</h1>
+    <div  style="text-align: center; margin: 20px;">
+        <!-- <h1>Tell Us More About Yourself</h1> -->
+        <img src="./images/who-are-you.jpg">
     </div>
-    <div id="firebaseui-auth-container"></div>
+        <form>
+            <fieldset class="mb-3" id="personalInfoFields" disabled>
+                <div class="form-group">
+                    <label >Name</label>
+                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label >School</label>
+                    <input type="text" id="schoolInput" class="form-control" placeholder="Enter your school">
+                </div>
+                <div class="form-group">
+                    <label >Program</label>
+                    <input type="text" id="programInput" class="form-control" placeholder="Enter your Program(e.g.:CST)">
+                </div>
+                <div class="form-group">
+                    <label >Term</label>
+                    <input type="text" id="termInput" class="form-control" placeholder="Enter your term(e.g.:term1-202230)">
+                </div>
+                <div class="form-group">
+                    <label >Set</label>
+                    <input type="text" id="setInput" class="form-control" placeholder="Enter your set(e.g.:setA)">
+                </div>
+            </fieldset>
+            <div class="d-flex justify-content-end mt-5">
+                <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+                <span style="width: 10px"></span>
+                <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+            </div>
+        </form>
+    </div>
 
     <!-- our own footer goes here-->
-    <nav id="footerPlaceholder"></nav>
+    <!-- our own footer goes here-->
+    <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
+        <span class="material-icons"><a href="home.html"><img src = "./images/home_FILL0_wght400_GRAD0_opsz48.png"></a></span>
+        <span class="material-icons"><a href="timetable.html"><img src = "./images/calendar_month_FILL0_wght400_GRAD0_opsz48.png"></a></span>
+        <span class="material-icons"><a href="duedate.html"><img src="./images/duedate2.png"></a></span>
+        <span class="material-symbols-outlined"><a href="registration.html"><img src = "./images/person_FILL0_wght400_GRAD0_opsz48.png"></a></span>
+    </footer>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
@@ -74,7 +109,7 @@
     <script src="./scripts/firebaseAPI_TEAM18.js"></script>
     <script src="./scripts/authentication.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/registration.js"></script>
     
 
 </body>
