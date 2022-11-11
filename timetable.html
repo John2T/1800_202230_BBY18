@@ -61,6 +61,25 @@
       href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
     />
 
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>  -->
+    <!-- <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" /> -->
+
+
+
+
     <!-- Link to styles of your own -->
     <link
       rel="stylesheet"
@@ -102,13 +121,10 @@
     </nav>
     <p></p>
 
-    <div id="container">
-      <!-- Here is container for cards  -->
-      <div class="container">
-        <div id="8:30" class="row row-cols-auto"></div>
-      </div>
-      <div class="row row-cols-6">
-        <div class="col"></div>
+    <div class="container">
+      <div class="row row-cols-6" >
+
+        <div class="col"> </div>
         <div class="col-head"><strong>Mon</strong></div>
         <div class="col-head"><strong>Tue</strong></div>
         <div class="col-head"><strong>Wed</strong></div>
@@ -116,22 +132,34 @@
         <div class="col-head"><strong>Fri</strong></div>
         <div class="col">8:30</div>
 
+        <a href="course-info.html" class="list-group-item">
         <div class="col">
-          <a href="course-info.html">
-          <span id="m0"></span>
-        </a>
+          <p class="list-group-item-text">
+          8:30 ~ 9:20<br>
+          <b>COMP 1510</b><br>
+          Tutorial<br>
+          SE12 321<br>
+        </p>
         </div>
 
-        <div class="col">
-          <a href="course-info.html">
-          <span id="t0"></span>
-        </a>
-        </div>
+        <a href="course-info.html" class="list-group-item">
+          <div class="col">
+            <p class="list-group-item-text">
+            8:30 ~ 9:20<br>
+            <b>COMP 1510</b><br>
+            Tutorial<br>
+            SE12 321<br>
+          </p>
+          </div>
+          </a>
 
         <div class="col">
-          <a href="course-info.html">
-          <span id="w0"></span>
-        </a>
+          <p class="list-group-item-text">
+          8:30 ~ 9:20<br>
+          <b>COMP 1510</b><br>
+          Tutorial<br>
+          SE12 321<br>
+        </p>
         </div>
 
         <div class="col">
@@ -429,6 +457,8 @@
 
     <!-- Link to scripts of your own -->
     <script src="./scripts/firebaseAPI_TEAM18.js"></script>
-    <script src="./scripts/timetable.js"></script>
-  </body>
+    <script src="./scripts/authentication.js"></script>
+
+</body>
+
 </html>
