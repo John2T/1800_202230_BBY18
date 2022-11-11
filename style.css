@@ -18,6 +18,7 @@ div .col {
 }
 
 
-.container a {
-    background-color: rgba(76, 138, 205, 0.1);
+a {
+    color: black;
+    text-decoration: none;
 }

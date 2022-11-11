@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Timetable</title>
-    <meta name="comp1800 template" content="My 1800 App">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <meta name="comp1800 template" content="My 1800 App" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap Library CSS CDN go here -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <!-- Boostrap Library JS CDN  go here -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- Other libraries go here -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"
+    />
 
     <!-- Link to styles of your own -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-
-</head>
-
-<body>
-  
-
+  <body>
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
-    
+
     <nav class="navbar navbar-light bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand text-light">Team18</a>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
           <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
@@ -46,17 +91,24 @@
 
     <nav class="navbar bg-light">
       <form class="container-fluid justify-content-between">
-        <a href="home.html"><span class="material-symbols-outlined">arrow_back</span></a>
+        <a href="home.html"
+          ><span class="material-symbols-outlined">arrow_back</span></a
+        >
         <span style="font-size: 20px"><h3>Timetable</h3></span>
-        <a href="list.html"><span class="material-symbols-outlined">list</span></a>
+        <a href="list.html"
+          ><span class="material-symbols-outlined">list</span></a
+        >
       </form>
     </nav>
-    <p> </p>
+    <p></p>
 
-    <div class="container">
-      <div class="row row-cols-6" >
-
-        <div class="col"> </div>
+    <div id="container">
+      <!-- Here is container for cards  -->
+      <div class="container">
+        <div id="8:30" class="row row-cols-auto"></div>
+      </div>
+      <div class="row row-cols-6">
+        <div class="col"></div>
         <div class="col-head"><strong>Mon</strong></div>
         <div class="col-head"><strong>Tue</strong></div>
         <div class="col-head"><strong>Wed</strong></div>
@@ -64,372 +116,311 @@
         <div class="col-head"><strong>Fri</strong></div>
         <div class="col">8:30</div>
 
-        <a href="course-info.html" class="list-group-item">
         <div class="col">
-          <p class="list-group-item-text">
-          8:30 ~ 9:20<br>
-          <b>COMP 1510</b><br>
-          Tutorial<br>
-          SE12 321<br>
-        </p>
-        </div>
+          <a href="course-info.html">
+          <span id="m0"></span>
         </a>
-
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            8:30 ~ 9:20<br>
-            <b>COMP 1510</b><br>
-            Tutorial<br>
-            SE12 321<br>
-          </p>
-          </div>
-          </a>
-
-        <a href="course-info.html" class="list-group-item">
-        <div class="col">
-          <p class="list-group-item-text">
-          8:30 ~ 9:20<br>
-          <b>COMP 1510</b><br>
-          Tutorial<br>
-          SE12 321<br>
-        </p>
         </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t0"></span>
         </a>
-
-        <a href="course-info.html" class="list-group-item">
-        <div class="col">
-          <p class="list-group-item-text">
-          8:30 ~ 9:20<br>
-          <b>COMP 1510</b><br>
-          Tutorial<br>
-          SE12 321<br>
-        </p>
         </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w0"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            8:30 ~ 9:20<br>
-            <b>COMP 1510</b><br>
-            Tutorial<br>
-            SE12 321<br>
-          </p>
-          </div>
-          </a>
+        </div>
 
         <div class="col">
-          9:30
+          <a href="course-info.html">
+          <span id="th0"></span>
+        </a>
         </div>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-          </a>          
-          <a href="course-info.html" class="list-group-item">
-            <div class="col">
-              <p class="list-group-item-text">
-              
-            </p>
-            </div>
-            </a>          
-            <a href="course-info.html" class="list-group-item">
-              <div class="col">
-                <p class="list-group-item-text">
-                
-              </p>
-              </div>
-              </a>          
-              <a href="course-info.html" class="list-group-item">
-                <div class="col">
-                  <p class="list-group-item-text">
-                  
-                </p>
-                </div>
-                </a>          
-                <a href="course-info.html" class="list-group-item">
-                  <div class="col">
-                    <p class="list-group-item-text">
-                    
-                  </p>
-                  </div>
-                  </a>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f0"></span>
+        </a>
+        </div>
+
+        <div class="col">9:30</div>
+        <div class="col">
+          <a href="course-info.html">
+          <span id="m1"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t1"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w1"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="th1"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f1"></span>
+        </a>
+        </div>
 
         <div class="col">10:30</div>
         
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        <div class="col">
+          <a href="course-info.html">
+          <span id="m2"></span>
         </a>
+        </div>
         
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t2"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-          </a>
-          <a href="course-info.html" class="list-group-item">
-            <div class="col">
-              <p class="list-group-item-text">
-              
-            </p>
-            </div>
-            </a>
-            <a href="course-info.html" class="list-group-item">
-              <div class="col">
-                <p class="list-group-item-text">
-                
-              </p>
-              </div>
-              </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w2"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="th2"></span>
+        </a>
+        </div>
+        
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f2"></span>
+        </a>
+        </div>
 
         <div class="col">11:30</div>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        
+        <div class="col">
+          <a href="course-info.html">
+          <span id="m3"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t3"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        </div>
+        
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w3"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="th3"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f3"></span>
         </a>
+        </div>
 
         <div class="col">12:30</div>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        
+        <div class="col">
+          <a href="course-info.html">
+          <span id="m4"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
+        </div>
 
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t4"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w4"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="th4"></span>
+        </a>
+        </div>
+        
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f4"></span>
+        </a>
+        </div>
 
         <div class="col">1:30</div>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        
+        <div class="col">
+          <a href="course-info.html">
+          <span id="m5"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
+        </div>
 
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t5"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w5"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="th5"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f5"></span>
+        </a>
+        </div>
 
         <div class="col">2:30</div>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
 
+        <div class="col">
+          <a href="course-info.html">
+          <span id="m6"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t6"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w6"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="th6"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f6"></span>
+        </a>
+        </div>
 
         <div class="col">3:30</div>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
-        </a>
 
+        <div class="col">
+          <a href="course-info.html">
+          <span id="m7"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t7"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w7"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="th7"></span>
+        </a>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f7"></span>
+        </a>
+        </div>
 
         <div class="col">4:30</div>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="m8"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        </div>
+        
+        <div class="col">
+          <a href="course-info.html">
+          <span id="t8"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="w8"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="th8"></span>
         </a>
-        <a href="course-info.html" class="list-group-item">
-          <div class="col">
-            <p class="list-group-item-text">
-            
-          </p>
-          </div>
+        </div>
+
+        <div class="col">
+          <a href="course-info.html">
+          <span id="f8"></span>
         </a>
+        </div>
       </div>
     </div>
 
     <!-- our own footer goes here-->
     <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
-      <span class="material-icons"><a href="home.html"><img src = "./images/home_FILL0_wght400_GRAD0_opsz48.png"></a></span>
-      <span class="material-icons"><a href="timetable.html"><img src = "./images/calendar_month_FILL0_wght400_GRAD0_opsz48.png"></a></span>
-      <span class="material-icons"><a href="duedate.html"><img src="./images/duedate2.png"></a></span>
-      <span class="material-symbols-outlined"><a href="account.html"><img src = "./images/person_FILL0_wght400_GRAD0_opsz48.png"></a></span>
+      <span class="material-icons"
+        ><a href="home.html"
+          ><img src="./images/home_FILL0_wght400_GRAD0_opsz48.png" /></a
+      ></span>
+      <span class="material-icons"
+        ><a href="timetable.html"
+          ><img
+            src="./images/calendar_month_FILL0_wght400_GRAD0_opsz48.png" /></a
+      ></span>
+      <span class="material-icons"
+        ><a href="duedate.html"><img src="./images/duedate2.png" /></a
+      ></span>
+      <span class="material-symbols-outlined"
+        ><a href="account.html"
+          ><img src="./images/person_FILL0_wght400_GRAD0_opsz48.png" /></a
+      ></span>
     </footer>
 
     <!---------------------------------------------->
@@ -438,8 +429,6 @@
 
     <!-- Link to scripts of your own -->
     <script src="./scripts/firebaseAPI_TEAM18.js"></script>
-    <script src="./scripts/authentication.js"></script>
-
-</body>
-
+    <script src="./scripts/timetable.js"></script>
+  </body>
 </html>
