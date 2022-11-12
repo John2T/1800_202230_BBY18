@@ -89,3 +89,169 @@ function readSchedule() {
   //         });
   //     });
   // }
+
+
+  //Write courses start
+function writeCourses() {
+    //define a variable for the collection you want to create in Firestore to populate data
+    var courseRef = db.collection("courses");
+  
+  
+  //Currently for tuesday and thursday
+    //Tuesday
+    //COmp 1510 830-1030
+    courseRef.add({
+  
+      name: "Comp 1510",
+      location: "SE12-321",
+      type: "Lab",
+      slot: "t0",
+    });  
+  
+    courseRef.add({
+      name: "Comp 1510",
+      location: "SE12-321",
+      type: "Lab",
+      slot: "t1",
+    });  
+  
+    //comp 1800 1030-1230
+    courseRef.add({
+      name: "Comp 1800",
+      location: "SW05-1710",
+      type: "Lecture",
+      slot: "t2",
+    });  
+  
+    courseRef.add({
+      name: "Comp 1800",
+      location: "SW05-1710",
+      type: "Lecture",
+      slot: "t3",
+    });  
+  
+    //Break 1 hr
+    courseRef.add({
+      name: "Break",
+      location: "",
+      type: "",
+      slot: "t4",
+    });  
+  
+    //Comp 1537 1330-1530
+    courseRef.add({
+      name: "Comp 1537",
+      location: "SW05-1850",
+      type: "Lecture",
+      slot: "t5",
+    })
+   
+    courseRef.add({
+      name: "Comp 1537",
+      location: "SW05-1850",
+      type: "Lecture",
+      slot: "t6",
+    })
+  
+    //Comp 1510 1530-1630
+    courseRef.add({
+      name: "Comp 1510",
+      location: "SW05-1850",
+      type: "Lecture",
+      slot: "t7",
+    })
+  
+    //Comp 1100 1630-1730
+    courseRef.add({
+      name: "Comp 1100",
+      location: "SW05-1840",
+      type: "Lecture",
+      slot: "t8",
+    })
+  
+    //Tuesday End
+  
+  
+    //Thursday Start
+  
+    //COmp 1800 830-1030
+    courseRef.add({
+       name: "Comp 1800",
+      location: "SE12-322",
+       type: "Lab",
+       slot: "th0",
+    });
+  
+    courseRef.add({
+      name: "Comp 1800",
+     location: "SE12-322",
+      type: "Lab",
+      slot: "th1",
+   });
+  
+    //Comp 1116 1030-1230
+    courseRef.add({
+      name: "Comp 1116",
+      location: "SE12-313",
+      type: "Lab",
+      slot: "th3",
+    });
+  
+   
+   courseRef.add({
+    name: "Comp 1116",
+    location: "SE12-313",
+    type: "Lab",
+    slot: "th4",
+   });
+  
+   //break 1hr
+   courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "th5",
+  });  
+  
+    //Comp 1537 1330-1530
+   courseRef.add({
+      name: "Comp 1537",
+      location: "SE12-322",
+      type: "Lab",
+      slot: "th6",
+   }); 
+  
+   
+   courseRef.add({
+    name: "Comp 1537",
+    location: "SE12-322",
+    type: "Lab",
+    slot: "th7",
+  }); 
+   
+  
+  courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "th7",
+  });  
+  
+  courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "th8",
+  });  
+  
+  //Thursday end
+  }
+  //Keep commented or else you will keep adding courses
+  //writeCourses();
+  //WriteCourses end
+
+
+
+
+
+
