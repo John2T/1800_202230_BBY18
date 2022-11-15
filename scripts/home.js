@@ -1,4 +1,4 @@
-function app(){
+function todolist(){
     return {
         todos: [],
         focusItem: function(index) {
