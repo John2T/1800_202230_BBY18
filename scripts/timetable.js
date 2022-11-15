@@ -1,3 +1,62 @@
+function writeQuotes() {
+  var quotesRef = db.collection("quotes");
+
+  quotesRef.add({
+      name: "quote1",
+      details: "“All truly great thoughts are conceived by walking.” ~ Friedrich Nietzsche",
+  });
+
+  quotesRef.add({
+      name: "quote2",
+      details: "“Don’t let yesterday take up too much of today.” ~ Will Rogers",
+  });
+
+  quotesRef.add({
+      name: "quote3",
+      details: "“It always seems impossible until it’s done.” ~ Nelson Mandela",
+  });
+
+  quotesRef.add({
+      name: "quote4",
+      details: "“Positive anything is better than negative nothing.” ~ Elbert Hubbard",
+  });
+
+  quotesRef.add({
+      name: "quote5",
+      details: "“If you look at what you have in life, you’ll always have more.” ~ Oprah Winfrey",
+  });
+
+  quotesRef.add({
+      name: "quote6",
+      details: "“Every moment is a fresh beginning.” ~ T.S Eliot",
+  });
+
+  quotesRef.add({
+      name: "quote7",
+      details: "“Believe you can and you’re halfway there.” ~ Theodore Roosevelt",
+  });
+
+  quotesRef.add({
+      name: "quote8",
+      details: "“The bad news is time flies. The good news is you’re the pilot.” ~ Michael Altshuler",
+  });
+
+  quotesRef.add({
+      name: "quote9",
+      details: "“A person who never made a mistake never tried anything new.” ~ Albert Einstein",
+  });
+
+  quotesRef.add({
+      name: "quote10",
+      details: "“The roots of education are bitter, but the fruit is sweet.” ~ Aristotle",
+  });
+}
+
+// This function is one-time thing for adding the data to database, so I commented out.
+// writeQuotes();
+
+
+
 //Write courses start
 function writeCourses() {
   //define a variable for the collection you want to create in Firestore to populate data
@@ -380,26 +439,23 @@ courseRef.add({
 //WriteCourses end
 
 
-function readCourses() {
-dbcolelction("courses").doc
-}
-
-
 function readSchedule() {
     // db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy")
     //     .onSnapshot(setD => {
 
 
     // }
-    db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy")                                                      //name of the collection and documents should matach excatly with what you have in Firestore
-      .onSnapshot(timetable => {                                                               //arrow notation
+    db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy") 
+    .get()
+    .then(                                                     //name of the collection and documents should matach excatly with what you have in Firestore
+      timetable => {                                                               //arrow notation
           console.log("current document data: " + timetable.data());    //.data() returns data object
           
-        //   for (let i = 0; i < 9; i++) {
-        //       document.getElementById("m"+i).innerHTML = timetable.data().mon[i];
-        //   }
-
           for (let i = 0; i < 9; i++) {
+              document.getElementById("m"+i).innerHTML = timetable.data().mon[i];
+          }
+
+        for (let i = 0; i < 9; i++) {
             document.getElementById("t"+i).innerHTML = timetable.data().tue[i];
         }
 
