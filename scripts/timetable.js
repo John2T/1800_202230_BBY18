@@ -2,60 +2,64 @@ function writeQuotes() {
   var quotesRef = db.collection("quotes");
 
   quotesRef.add({
-      name: "quote1",
-      details: "“All truly great thoughts are conceived by walking.” ~ Friedrich Nietzsche",
+    name: "quote1",
+    details:
+      "“All truly great thoughts are conceived by walking.” ~ Friedrich Nietzsche",
   });
 
   quotesRef.add({
-      name: "quote2",
-      details: "“Don’t let yesterday take up too much of today.” ~ Will Rogers",
+    name: "quote2",
+    details: "“Don’t let yesterday take up too much of today.” ~ Will Rogers",
   });
 
   quotesRef.add({
-      name: "quote3",
-      details: "“It always seems impossible until it’s done.” ~ Nelson Mandela",
+    name: "quote3",
+    details: "“It always seems impossible until it’s done.” ~ Nelson Mandela",
   });
 
   quotesRef.add({
-      name: "quote4",
-      details: "“Positive anything is better than negative nothing.” ~ Elbert Hubbard",
+    name: "quote4",
+    details:
+      "“Positive anything is better than negative nothing.” ~ Elbert Hubbard",
   });
 
   quotesRef.add({
-      name: "quote5",
-      details: "“If you look at what you have in life, you’ll always have more.” ~ Oprah Winfrey",
+    name: "quote5",
+    details:
+      "“If you look at what you have in life, you’ll always have more.” ~ Oprah Winfrey",
   });
 
   quotesRef.add({
-      name: "quote6",
-      details: "“Every moment is a fresh beginning.” ~ T.S Eliot",
+    name: "quote6",
+    details: "“Every moment is a fresh beginning.” ~ T.S Eliot",
   });
 
   quotesRef.add({
-      name: "quote7",
-      details: "“Believe you can and you’re halfway there.” ~ Theodore Roosevelt",
+    name: "quote7",
+    details: "“Believe you can and you’re halfway there.” ~ Theodore Roosevelt",
   });
 
   quotesRef.add({
-      name: "quote8",
-      details: "“The bad news is time flies. The good news is you’re the pilot.” ~ Michael Altshuler",
+    name: "quote8",
+    details:
+      "“The bad news is time flies. The good news is you’re the pilot.” ~ Michael Altshuler",
   });
 
   quotesRef.add({
-      name: "quote9",
-      details: "“A person who never made a mistake never tried anything new.” ~ Albert Einstein",
+    name: "quote9",
+    details:
+      "“A person who never made a mistake never tried anything new.” ~ Albert Einstein",
   });
 
   quotesRef.add({
-      name: "quote10",
-      details: "“The roots of education are bitter, but the fruit is sweet.” ~ Aristotle",
+    name: "quote10",
+    details:
+      "“The roots of education are bitter, but the fruit is sweet.” ~ Aristotle",
   });
 }
 
 // This function is one-time thing for adding the data to database, so I commented out.
 // writeQuotes();
-
-
 
 //Write courses start
 function writeCourses() {
@@ -69,7 +73,7 @@ function writeCourses() {
     location: "",
     type: "",
     slot: "m0",
-  });  
+  });
 
   //930-1030
   courseRef.add({
@@ -77,55 +81,55 @@ function writeCourses() {
     location: "",
     type: "",
     slot: "m1",
-  });  
+  });
 
-   //1030-1130
-   courseRef.add({
+  //1030-1130
+  courseRef.add({
     name: "Comp1510",
     location: "SW05-1840",
     type: "Lecture",
     slot: "m2",
-  });  
+  });
 
-   //1130-1230
-   courseRef.add({
+  //1130-1230
+  courseRef.add({
     name: "Break",
     location: "",
     type: "",
     slot: "m3",
-  });  
+  });
 
-   //Comp 1712 1230-1430
-   courseRef.add({
+  //Comp 1712 1230-1430
+  courseRef.add({
     name: "Comp 1712",
     location: "SE12-306",
     type: "Lab",
     slot: "m4",
-  });  
+  });
 
-   //Comp 1712 1230-1430
-   courseRef.add({
+  //Comp 1712 1230-1430
+  courseRef.add({
     name: "Comp 1712",
     location: "Se12-306",
     type: "Lab",
     slot: "m5",
-  });  
+  });
 
-   //1430-1530
-   courseRef.add({
+  //1430-1530
+  courseRef.add({
     name: "Break",
     location: "",
     type: "",
     slot: "m6",
-  });  
+  });
 
-   //1530-1630
-   courseRef.add({
+  //1530-1630
+  courseRef.add({
     name: "Break",
     location: "",
     type: "",
     slot: "m7",
-  });  
+  });
 
   //1630-1730
   courseRef.add({
@@ -133,26 +137,24 @@ function writeCourses() {
     location: "",
     type: "",
     slot: "m8",
-  });  
- //Monday end
-
+  });
+  //Monday end
 
   //Tuesday
   //COmp 1510 830-1030
   courseRef.add({
-
     name: "Comp 1510",
     location: "SE12-321",
     type: "Lab",
     slot: "t0",
-  });  
+  });
 
   courseRef.add({
     name: "Comp 1510",
     location: "SE12-321",
     type: "Lab",
     slot: "t1",
-  });  
+  });
 
   //comp 1800 1030-1230
   courseRef.add({
@@ -160,14 +162,14 @@ function writeCourses() {
     location: "SW05-1710",
     type: "Lecture",
     slot: "t2",
-  });  
+  });
 
   courseRef.add({
     name: "Comp 1800",
     location: "SW05-1710",
     type: "Lecture",
     slot: "t3",
-  });  
+  });
 
   //Break 1 hr
   courseRef.add({
@@ -175,7 +177,7 @@ function writeCourses() {
     location: "",
     type: "",
     slot: "t4",
-  });  
+  });
 
   //Comp 1537 1330-1530
   courseRef.add({
@@ -183,14 +185,14 @@ function writeCourses() {
     location: "SW05-1850",
     type: "Lecture",
     slot: "t5",
-  })
- 
+  });
+
   courseRef.add({
     name: "Comp 1537",
     location: "SW05-1850",
     type: "Lecture",
     slot: "t6",
-  })
+  });
 
   //Comp 1510 1530-1630
   courseRef.add({
@@ -198,7 +200,7 @@ function writeCourses() {
     location: "SW05-1850",
     type: "Lecture",
     slot: "t7",
-  })
+  });
 
   //Comp 1100 1630-1730
   courseRef.add({
@@ -206,11 +208,9 @@ function writeCourses() {
     location: "SW05-1840",
     type: "Lecture",
     slot: "t8",
-  })
+  });
 
   //Tuesday End
-
-
 
   //Wednesday start
   //Comp 1510 830-930
@@ -219,7 +219,7 @@ function writeCourses() {
     location: "SE12-321",
     type: "Tutorial",
     slot: "w0",
-  });  
+  });
 
   //930-1030
   courseRef.add({
@@ -227,7 +227,7 @@ function writeCourses() {
     location: "",
     type: "",
     slot: "w1",
-  });  
+  });
 
   //Comp 1113 1030-1230
   courseRef.add({
@@ -235,22 +235,22 @@ function writeCourses() {
     location: "SW05-2875",
     type: "Lab",
     slot: "w2",
-  });  
+  });
 
-   courseRef.add({
+  courseRef.add({
     name: "Comp 1113",
     location: "SW05-2875",
     type: "Lab",
     slot: "w3",
-  }); 
-  
+  });
+
   //Comp1510 1230-1330
   courseRef.add({
     name: "Comp 1510",
     location: "SE12-320",
     type: "Lab",
     slot: "w4",
-  }); 
+  });
 
   //Comp1510 1330-1430
   courseRef.add({
@@ -258,51 +258,49 @@ function writeCourses() {
     location: "SW05-1850",
     type: "Lecture",
     slot: "w5",
-  }); 
+  });
 
-   //1430-1530
-   courseRef.add({
+  //1430-1530
+  courseRef.add({
     name: "Break",
     location: "",
     type: "",
     slot: "w6",
-  }); 
+  });
 
-   //1530-1630
-   courseRef.add({
+  //1530-1630
+  courseRef.add({
     name: "Break",
     location: "",
     type: "",
     slot: "w7",
-  }); 
+  });
 
-   //1630-1730
-   courseRef.add({
+  //1630-1730
+  courseRef.add({
     name: "Break",
     location: "",
     type: "",
     slot: "w8",
-  }); 
+  });
   //Wednesday End
-
-
 
   //Thursday Start
 
   //COmp 1800 830-1030
   courseRef.add({
-     name: "Comp 1800",
+    name: "Comp 1800",
     location: "SE12-322",
-     type: "Lab",
-     slot: "th0",
+    type: "Lab",
+    slot: "th0",
   });
 
   courseRef.add({
     name: "Comp 1800",
-   location: "SE12-322",
+    location: "SE12-322",
     type: "Lab",
     slot: "th1",
- });
+  });
 
   //Comp 1116 1030-1230
   courseRef.add({
@@ -312,232 +310,276 @@ function writeCourses() {
     slot: "th3",
   });
 
- 
- courseRef.add({
-  name: "Comp 1116",
-  location: "SE12-313",
-  type: "Lab",
-  slot: "th4",
- });
+  courseRef.add({
+    name: "Comp 1116",
+    location: "SE12-313",
+    type: "Lab",
+    slot: "th4",
+  });
 
- //break 1hr
- courseRef.add({
-  name: "Break",
-  location: "",
-  type: "",
-  slot: "th5",
-});  
+  //break 1hr
+  courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "th5",
+  });
 
   //Comp 1537 1330-1530
- courseRef.add({
+  courseRef.add({
     name: "Comp 1537",
     location: "SE12-322",
     type: "Lab",
     slot: "th6",
- }); 
+  });
 
- 
- courseRef.add({
-  name: "Comp 1537",
-  location: "SE12-322",
-  type: "Lab",
-  slot: "th7",
-}); 
- 
+  courseRef.add({
+    name: "Comp 1537",
+    location: "SE12-322",
+    type: "Lab",
+    slot: "th7",
+  });
 
-courseRef.add({
-  name: "Break",
-  location: "",
-  type: "",
-  slot: "th7",
-});  
+  courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "th7",
+  });
 
-courseRef.add({
-  name: "Break",
-  location: "",
-  type: "",
-  slot: "th8",
-});  
+  courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "th8",
+  });
 
-//Thursday end
+  //Thursday end
 
-//Friday start
-//Comp 1116 830-1030
-courseRef.add({
-  name: "Comp 1116",
-  location: "SW05-1840",
-  type: "Lecture",
-  slot: "f0",
-}); 
+  //Friday start
+  //Comp 1116 830-1030
+  courseRef.add({
+    name: "Comp 1116",
+    location: "SW05-1840",
+    type: "Lecture",
+    slot: "f0",
+  });
 
-courseRef.add({
-  name: "Comp 1116",
-  location: "SW05-1840",
-  type: "Lecture",
-  slot: "f1",
-}); 
+  courseRef.add({
+    name: "Comp 1116",
+    location: "SW05-1840",
+    type: "Lecture",
+    slot: "f1",
+  });
 
-//Comp1712 1030-1230
-courseRef.add({
-  name: "Comp 1712",
-  location: "NE01-331",
-  type: "Lecture",
-  slot: "f2",
-}); 
+  //Comp1712 1030-1230
+  courseRef.add({
+    name: "Comp 1712",
+    location: "NE01-331",
+    type: "Lecture",
+    slot: "f2",
+  });
 
+  courseRef.add({
+    name: "Comp 1712",
+    location: "NE01-331",
+    type: "Lecture",
+    slot: "f3",
+  });
 
-courseRef.add({
-  name: "Comp 1712",
-  location: "NE01-331",
-  type: "Lecture",
-  slot: "f3",
-}); 
+  //1230-1330
+  courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "f4",
+  });
 
-//1230-1330
-courseRef.add({
-  name: "Break",
-  location: "",
-  type: "",
-  slot: "f4",
-}); 
+  //1330-1430
+  courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "f5",
+  });
 
-//1330-1430
-courseRef.add({
-  name: "Break",
-  location: "",
-  type: "",
-  slot: "f5",
-}); 
+  //Comp 1113 1430-1630
+  courseRef.add({
+    name: "Comp 1113",
+    location: "SW01-1205",
+    type: "Lecture",
+    slot: "f6",
+  });
 
-//Comp 1113 1430-1630
-courseRef.add({
-  name: "Comp 1113",
-  location: "SW01-1205",
-  type: "Lecture",
-  slot: "f6",
-}); 
+  courseRef.add({
+    name: "Comp 1113",
+    location: "SW01-1205",
+    type: "Lecture",
+    slot: "f7",
+  });
 
-courseRef.add({
-  name: "Comp 1113",
-  location: "SW01-1205",
-  type: "Lecture",
-  slot: "f7",
-}); 
-
-//1630-1730
-courseRef.add({
-  name: "Break",
-  location: "",
-  type: "",
-  slot: "f8",
-}); 
-//Friday End
+  //1630-1730
+  courseRef.add({
+    name: "Break",
+    location: "",
+    type: "",
+    slot: "f8",
+  });
+  //Friday End
 }
 //Leaving this code here in case we need to make any changes
 //Keep commented or else you will keep adding courses to database
 //writeCourses();
 //WriteCourses end
 
-
-function readSchedule() {
-    // db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy")
-    //     .onSnapshot(setD => {
-
-
-    // }
-    db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy") 
-    .get()
-    .then(                                                     //name of the collection and documents should matach excatly with what you have in Firestore
-      timetable => {                                                               //arrow notation
-          console.log("current document data: " + timetable.data());    //.data() returns data object
-          
-          for (let i = 0; i < 9; i++) {
-              document.getElementById("m"+i).innerHTML = timetable.data().mon[i];
-          }
-
-        for (let i = 0; i < 9; i++) {
-            document.getElementById("t"+i).innerHTML = timetable.data().tue[i];
-        }
-
-        for (let i = 0; i < 9; i++) {
-            document.getElementById("w"+i).innerHTML = timetable.data().wed[i];
-        }
-
-        for (let i = 0; i < 9; i++) {
-            document.getElementById("th"+i).innerHTML = timetable.data().thu[i];
-        }
-
-        for (let i = 0; i < 9; i++) {
-            document.getElementById("f"+i).innerHTML = timetable.data().fri[i]; 
-        }
-        //   document.getElementById("m0").innerHTML = timetable.data().mon[0];    //using javascript to display the data on the right place
-        //   document.getElementById("m1").innerHTML = timetable.data().mon[1];
-        //   document.getElementById("m2").innerHTML = timetable.data().mon[2];
-        //   document.getElementById("m3").innerHTML = timetable.data().mon[3];
-        //   document.getElementById("m4").innerHTML = timetable.data().mon[4];
-        //   document.getElementById("m5").innerHTML = timetable.data().mon[5];
-        //   document.getElementById("m6").innerHTML = timetable.data().mon[6];
-        //   document.getElementById("m7").innerHTML = timetable.data().mon[7];
-        //   document.getElementById("m8").innerHTML = timetable.data().mon[8];
-  
-        //   document.getElementById("t0").innerHTML = timetable.data().tue[0];
-        //   document.getElementById("t1").innerHTML = timetable.data().tue[1];
-        //   document.getElementById("t2").innerHTML = timetable.data().tue[2];
-        //   document.getElementById("t3").innerHTML = timetable.data().tue[3];
-        //   document.getElementById("t4").innerHTML = timetable.data().tue[4];
-        //   document.getElementById("t5").innerHTML = timetable.data().tue[5];
-        //   document.getElementById("t6").innerHTML = timetable.data().tue[6];
-        //   document.getElementById("t7").innerHTML = timetable.data().tue[7];
-        //   document.getElementById("t8").innerHTML = timetable.data().tue[8];
-  
-        //   document.getElementById("w0").innerHTML = timetable.data().wed[0];   // From wednesday, we don't have schedule data yet. 
-        //   document.getElementById("w1").innerHTML = timetable.data().wed[1];   // tue[0]; needs to be 
-        //   document.getElementById("w2").innerHTML = timetable.data().wed[2];
-        //   document.getElementById("w3").innerHTML = timetable.data().wed[3];
-        //   document.getElementById("w4").innerHTML = timetable.data().wed[4];
-        //   document.getElementById("w5").innerHTML = timetable.data().wed[5];
-        //   document.getElementById("w6").innerHTML = timetable.data().wed[6];
-        //   document.getElementById("w7").innerHTML = timetable.data().wed[7];
-        //   document.getElementById("w8").innerHTML = timetable.data().wed[8];
-  
-        //   document.getElementById("th0").innerHTML = timetable.data().thu[0];
-        //   document.getElementById("th1").innerHTML = timetable.data().thu[1];
-        //   document.getElementById("th2").innerHTML = timetable.data().thu[2];
-        //   document.getElementById("th3").innerHTML = timetable.data().thu[3];
-        //   document.getElementById("th4").innerHTML = timetable.data().thu[4];
-        //   document.getElementById("th5").innerHTML = timetable.data().thu[5];
-        //   document.getElementById("th6").innerHTML = timetable.data().thu[6];
-        //   document.getElementById("th7").innerHTML = timetable.data().thu[7];
-        //   document.getElementById("th8").innerHTML = timetable.data().thu[8];
-  
-        //   document.getElementById("f0").innerHTML = timetable.data().fri[0];
-        //   document.getElementById("f1").innerHTML = timetable.data().fri[1];
-        //   document.getElementById("f2").innerHTML = timetable.data().fri[2];
-        //   document.getElementById("f3").innerHTML = timetable.data().fri[3];
-        //   document.getElementById("f4").innerHTML = timetable.data().fri[4];
-        //   document.getElementById("f5").innerHTML = timetable.data().fri[5];
-        //   document.getElementById("f6").innerHTML = timetable.data().fri[6];
-        //   document.getElementById("f7").innerHTML = timetable.data().fri[7];
-        //   document.getElementById("f8").innerHTML = timetable.data().fri[8];
-  
-          
-      
+function getUsersSet() {
+  firebase.auth().onAuthStateChanged(user => {
+    // Check if user is signed in:
+    if (user) {
+  var currentUser = db.collection("users").doc(user.uid);
+  //get the document for current user.
+  currentUser.get()
+      .then(userDoc => {
+          //get the data fields of the user
+          var userSet = userDoc.data().set;  
+          console.log(userSet);        
       })
 }
-readSchedule();        //calling the function
+  })
+}
+
+getUsersSet();
+
+function readSchedule() {
+  db.collection("schedules")
+    // Need to figure out how to reference the set name from the user registration to in where() function.
+    .where("set", "==", "D")
+    .get()
+    .then((timetable) => {
+      timetable.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());    //Shows the document id that satisfies where() condition on console.
+//Reads the schedule for Monday. I commented out Monday since we don't have any data for, otherwise it doesn't display the Tuesday schedule somehow.
+        // for (let i = 0; i < 9; i++) {
+        //   var courseID = doc.data().mon[i];
+        //   console.log(courseID);
+
+        //   db.collection("courses")
+        //     .doc(courseID)
+        //     .get()
+        //     .then((doc) => {
+        //       // console.log(doc.data().name);
+        //       document.getElementById("m" + i).innerHTML =
+        //         doc.data().name +
+        //         "\n" +
+        //         doc.data().type +
+        //         "\n" +
+        //         doc.data().location;
+        //     });
+        // }
+//Reads the schedule for Tuesday.
+        for (let i = 0; i < 9; i++) {
+          var courseID = doc.data().tue[i];
+          console.log(courseID);
+
+          db.collection("courses")
+            .doc(courseID)
+            .get()
+            .then((doc) => {
+              // console.log(doc.data().name);
+              document.getElementById("t" + i).innerHTML =
+                doc.data().name +
+                "\n" +
+                doc.data().type +
+                "\n" +
+                doc.data().location;
+            });
+        }
+//Reads the schedule for Wednesday.
+        // for (let i = 0; i < 9; i++) {
+        //   var courseID = doc.data().wed[i];
+        //   console.log(courseID);
+
+        //   db.collection("courses")
+        //     .doc(courseID)
+        //     .get()
+        //     .then((doc) => {
+        //       // console.log(doc.data().name);
+        //       document.getElementById("w" + i).innerHTML =
+        //         doc.data().name +
+        //         "\n" +
+        //         doc.data().type +
+        //         "\n" +
+        //         doc.data().location;
+        //     });
+        // }
+//Reads the schedule for Thursday.
+        for (let i = 0; i < 9; i++) {
+          var courseID = doc.data().thu[i];
+          console.log(courseID);
+
+          db.collection("courses")
+            .doc(courseID)
+            .get()
+            .then((doc) => {
+              // console.log(doc.data().name);
+              document.getElementById("th" + i).innerHTML =
+                doc.data().name +
+                "\n" +
+                doc.data().type +
+                "\n" +
+                doc.data().location;
+            });
+        }
+//Reads the schedule for Friday.
+        for (let i = 0; i < 9; i++) {
+          var courseID = doc.data().fri[i];
+          console.log(courseID);
+
+          db.collection("courses")
+            .doc(courseID)
+            .get()
+            .then((doc) => {
+              // console.log(doc.data().name);
+              document.getElementById("f" + i).innerHTML =
+                doc.data().name +
+                "\n" +
+                doc.data().type +
+                "\n" +
+                doc.data().location;
+            });
+        }
+      });
+    });
+
+  // db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy")
+  // .get()
+  // .then(                                            //name of the collection and documents should matach excatly with what you have in Firestore
+  //   timetable => {                                                               //arrow notation
+  //       console.log("current document data: " + timetable.data());    //.data() returns data object
+
+  // for (let i = 0; i < 9; i++) {
+  //     // document.getElementById("t"+i).innerHTML = timetable.data().tue[i];
+  //     var courseID = timetable.data().tue[i];
+  //     console.log(courseID);
+  //     db.collection("courses").doc(courseID).get().then(
+  //       doc => {
+  //         console.log(doc.data().name);
+  //         document.getElementById("t"+i).innerHTML = doc.data().name + "\n" + doc.data().type + "\n" + doc.data().location;
+  //         // document.getElementById("t"+i).innerHTML =
+  //       })
+  // }
+
+ 
+
+}
+// readSchedule(); //calling the function
 
 //-----------------------------------------------
 // Create a "max" number of hike document objects
 //-----------------------------------------------
-var docData = {
-     Amon: [COMP1510, true, "hello"],
- };
- db.collection("timetable").doc("setD").set(docData).then(() => {
-     console.log("Document successfully written!");
- });
-
-
-
-
-
-
+// var docData = {
+//      Amon: [COMP1510, true, "hello"],
+//  };
+//  db.collection("timetable").doc("setD").set(docData).then(() => {
+//      console.log("Document successfully written!");
+//  });
