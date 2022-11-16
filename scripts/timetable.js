@@ -551,6 +551,7 @@ function readSchedule() {
       });
     });
 
+  // Codes below is for the reference.
   // db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy")
   // .get()
   // .then(                                            //name of the collection and documents should matach excatly with what you have in Firestore
@@ -572,7 +573,7 @@ function readSchedule() {
  
 
 }
-// readSchedule(); //calling the function
+readSchedule(); //calling the function
 
 //-----------------------------------------------
 // Create a "max" number of hike document objects
