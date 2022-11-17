@@ -69,7 +69,7 @@ function writeCourses() {
   //Monday start
   //830-930
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "m0",
@@ -77,7 +77,7 @@ function writeCourses() {
 
   //930-1030
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "m1",
@@ -93,7 +93,7 @@ function writeCourses() {
 
   //1130-1230
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "m3",
@@ -117,7 +117,7 @@ function writeCourses() {
 
   //1430-1530
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "m6",
@@ -125,7 +125,7 @@ function writeCourses() {
 
   //1530-1630
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "m7",
@@ -133,7 +133,7 @@ function writeCourses() {
 
   //1630-1730
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "m8",
@@ -173,7 +173,7 @@ function writeCourses() {
 
   //Break 1 hr
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "t4",
@@ -223,7 +223,7 @@ function writeCourses() {
 
   //930-1030
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "w1",
@@ -262,7 +262,7 @@ function writeCourses() {
 
   //1430-1530
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "w6",
@@ -270,7 +270,7 @@ function writeCourses() {
 
   //1530-1630
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "w7",
@@ -278,7 +278,7 @@ function writeCourses() {
 
   //1630-1730
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "w8",
@@ -319,7 +319,7 @@ function writeCourses() {
 
   //break 1hr
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "th5",
@@ -341,14 +341,14 @@ function writeCourses() {
   });
 
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "th7",
   });
 
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "th8",
@@ -389,7 +389,7 @@ function writeCourses() {
 
   //1230-1330
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "f4",
@@ -397,7 +397,7 @@ function writeCourses() {
 
   //1330-1430
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "f5",
@@ -420,7 +420,7 @@ function writeCourses() {
 
   //1630-1730
   courseRef.add({
-    name: "Break",
+    name: "",
     location: "",
     type: "",
     slot: "f8",
@@ -458,24 +458,24 @@ function readSchedule() {
     .then((timetable) => {
       timetable.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());    //Shows the document id that satisfies where() condition on console.
-//Reads the schedule for Monday. I commented out Monday since we don't have any data for, otherwise it doesn't display the Tuesday schedule somehow.
-        // for (let i = 0; i < 9; i++) {
-        //   var courseID = doc.data().mon[i];
-        //   console.log(courseID);
+//Reads the schedule for Monday.
+        for (let i = 0; i < 9; i++) {
+          var courseID = doc.data().mon[i];
+          console.log(courseID);
 
-        //   db.collection("courses")
-        //     .doc(courseID)
-        //     .get()
-        //     .then((doc) => {
-        //       // console.log(doc.data().name);
-        //       document.getElementById("m" + i).innerHTML =
-        //         doc.data().name +
-        //         "\n" +
-        //         doc.data().type +
-        //         "\n" +
-        //         doc.data().location;
-        //     });
-        // }
+          db.collection("courses")
+            .doc(courseID)
+            .get()
+            .then((doc) => {
+              // console.log(doc.data().name);
+              document.getElementById("m" + i).innerText =
+                doc.data().name +
+                "\n" +
+                doc.data().type +
+                "\n" +
+                doc.data().location;
+            });
+        }
 //Reads the schedule for Tuesday.
         for (let i = 0; i < 9; i++) {
           var courseID = doc.data().tue[i];
@@ -486,7 +486,7 @@ function readSchedule() {
             .get()
             .then((doc) => {
               // console.log(doc.data().name);
-              document.getElementById("t" + i).innerHTML =
+              document.getElementById("t" + i).innerText =
                 doc.data().name +
                 "\n" +
                 doc.data().type +
@@ -495,23 +495,23 @@ function readSchedule() {
             });
         }
 //Reads the schedule for Wednesday.
-        // for (let i = 0; i < 9; i++) {
-        //   var courseID = doc.data().wed[i];
-        //   console.log(courseID);
+        for (let i = 0; i < 9; i++) {
+          var courseID = doc.data().wed[i];
+          console.log(courseID);
 
-        //   db.collection("courses")
-        //     .doc(courseID)
-        //     .get()
-        //     .then((doc) => {
-        //       // console.log(doc.data().name);
-        //       document.getElementById("w" + i).innerHTML =
-        //         doc.data().name +
-        //         "\n" +
-        //         doc.data().type +
-        //         "\n" +
-        //         doc.data().location;
-        //     });
-        // }
+          db.collection("courses")
+            .doc(courseID)
+            .get()
+            .then((doc) => {
+              // console.log(doc.data().name);
+              document.getElementById("w" + i).innerText =
+                doc.data().name +
+                "\n" +
+                doc.data().type +
+                "\n" +
+                doc.data().location;
+            });
+        }
 //Reads the schedule for Thursday.
         for (let i = 0; i < 9; i++) {
           var courseID = doc.data().thu[i];
@@ -522,7 +522,7 @@ function readSchedule() {
             .get()
             .then((doc) => {
               // console.log(doc.data().name);
-              document.getElementById("th" + i).innerHTML =
+              document.getElementById("th" + i).innerText =
                 doc.data().name +
                 "\n" +
                 doc.data().type +
@@ -540,7 +540,7 @@ function readSchedule() {
             .get()
             .then((doc) => {
               // console.log(doc.data().name);
-              document.getElementById("f" + i).innerHTML =
+              document.getElementById("f" + i).innerText =
                 doc.data().name +
                 "\n" +
                 doc.data().type +
