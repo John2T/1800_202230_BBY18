@@ -1,4 +1,5 @@
-//User is logged in
+var currentUser
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     var currentUser = db.collection("users").doc(user.uid);
@@ -13,8 +14,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 
-function addtodo() {
-    console.log("in");
+function addtodo(){
+    
     let courseName = document.getElementById("course").value;
     let typeName = document.getElementById("type").value;
     let dueDate = document.getElementById("due").value;
@@ -22,7 +23,7 @@ function addtodo() {
 
 
     console.log(course, type, due, details);
-  //userID is the issue???
+  //user.uid not showing is the issue???
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       var currentUser = db.collection("users").doc(user.uid);
