@@ -109,7 +109,7 @@
           id="due"
           placeholder="Enter the due date"
           class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        /></input>
+        />
       </div>
       <div class="mb-5">
         <label
@@ -119,17 +119,19 @@
           Additional Details
         </label>
         <input
+          type = "text"
           rows="4"
           name="details"
           id="details"
           placeholder="Type your message"
           class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        ></input>
+        >
       </div>
       <div>
         <button
+          type = "button"
           class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 text-base font-semibold text-white outline-none"
-          onclick="addtodo()">
+          onclick="addToDo()">
           Add
         </button>
       </div>
@@ -155,7 +157,7 @@
 
     <!-- Link to scripts of your own -->
     <script src="./scripts/firebaseAPI_TEAM18.js"></script>
-   
     <script src = "./scripts/duedateform.js"></script>
   </body>
+  </head>
 </html>
