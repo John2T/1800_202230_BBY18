@@ -61,8 +61,6 @@ function saveUserInfo() {
         program: userProgram,
         term:userTerm,
         set:userSet,
-
-
     })
     .then(() => {
         console.log("Document successfully updated!");
