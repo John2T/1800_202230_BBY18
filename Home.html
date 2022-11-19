@@ -109,9 +109,8 @@
 
     <article class="container border bg-blue-50 border-blue-100 shadow-2xl rounded-2xl p-3 flex-auto" >
       <h1 class="font-bold text-blue-500">Upcoming</h1>
-      <p class="font-light text-black">Upcoming class here</p>
-      <h2 class="text-sm text-black mb-5">Class info?</h2>
-      <p class = "font-bold  text-blue-600 text-center">"Fun" Message</p>    
+      <b class="font-bold text-black"><span id="upcoming-goes-here"></span></b>
+      <p class = "font-bold  text-blue-600 text-center">Always remember that:<span id="quote-go-here" ></span></p>    
     </article>
 
 
@@ -122,14 +121,13 @@
 
     <article class="container bg-blue-50 shadow-2xl rounded-2xl p-2 flex-auto">
       <h1 class="font-bold text-blue-500">Current</h1>
-      <p class="font-light text-black" >Currentclass here</p>
-      <h6 class="text-sm text-black mb-5">Class info?</h6>
+      <p class="font-light text-black" ><span id="current-goes-here"></span></p>
     </article>
   
     <p> &nbsp; </p>
     
 
-<!-- component -->
+<!-- component
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 <style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
 
@@ -170,10 +168,7 @@
             <button class="py-1 px-10 border border-black hover:text-black rounded leading-none focus:outline-none text-xl" @click="addItem()"><i class="mdi mdi-plus"></i></button>
         </div>
     </div>
-</div>
-
-<script src = "./scripts/home.js"></script>
-
+</div> -->
     <!-- our own footer goes here-->
     <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
       <span class="material-icons"><a href="home.html"><img src = "./images/home_FILL0_wght400_GRAD0_opsz48.png"></a></span>
@@ -185,8 +180,13 @@
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
+    <script src="./scripts/firebaseAPI_TEAM18.js"></script>
     <script src="./scripts/time.js"></script>
     <script src="./scripts/home.js"></script>
+
+    <!-- <script src="./scripts/authentication.js"></script> -->
+    <!-- <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/script.js"></script> -->
     
 
 </body>
