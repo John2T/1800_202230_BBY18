@@ -1,22 +1,6 @@
 
 
 
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    var currentUser = db.collection("users").doc(user.uid);
-    console.log("User detected")
-    
-    console.log(user.uid)
-    // User is signed in.
-    // Do something for the user here.
-  } else {
-    console.log("no user")
-    // No user is signed in.
-  }
-});
-
-
-
 
 function addToDo(){
     
@@ -35,23 +19,23 @@ function addToDo(){
              type: typeName,
              due: dueDate,
              details: taskDetails,
-            })                  
-      } else {
-        console.log("Error");
-      }
-    });
-  }
+             id: '',
+             
+            
+            }).then(function(docRef) {
+              var id = docRef.id;
+              currentUser.doc(id).update({
+                course: courseName,
+                type: typeName,
+                due: dueDate,
+                details: taskDetails,
+                id: id,
+              })
+              window.location.replace("duedate.html");
+            })
+          }
+        })
 
-  /* //This works
-  var test = db.collection("users").doc("N6P9KwKe3IW3bQe74aK8TUNSMiP2")
-  .collection("todo");
- test.add({
-    course: "comp 1510",
-    type: "lab 8",
-    due: "tmr",
-    details: "very long",
-   })
-   */
-    
+      }
 
   
