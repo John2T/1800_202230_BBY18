@@ -31,6 +31,13 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
+    <!-- Link to styles of your own -->
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+  <link rel="stylesheet" href="./style.css" />
+  </head>
 
 
     <!-------------------------------------------->
@@ -50,47 +57,13 @@
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
-
-    <!-- our own navbar goes here -->
-    
-        <nav class="navbar navbar-light bg-primary">
-        <div class = "d-inline-flex p-2 bd-highlight">
-            <div class="container-fluid">
-            <a class="navbar-brand text-light">Team18</a>
-            </div>
-        </div>
-        <div class = "d-inline-flex p-2 bd-highlight">
-            <form class="d-inline-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-
-            <!--White Space-->
-            <p> &nbsp; </p>
-
-            <div class="btn-group dropdown">
-            <button class="btn btn-secondary dropdown-toggle d-inline-flex p-2 bd-highlight" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg>
-            </button>
-            
-                <ul class="dropdown-menu dropdown-menu-end"   role="menu" aria-labelledby="dropdownMenuLink">
-                <div class = "justify-content-evenly">
-                    <li><a class="dropdown-item" href="Settings.html">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">About</a></li>
-                    <li><a class="dropdown-item" href="#">Help</a></li>
-                </div>
-                </ul>    
-                </div>
-            </div>
-        </nav>
-
-        
- 
-
-    <!--Body-->
-    <!-- component -->
+    <!------------------------------top-navbar-------------------->
+    <nav class="navbar navbar-light bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light">Team18</a>
+      </div>
+    </nav>
+    <!--------------------list----------------------------------------->
     <nav class="navbar bg-light">
         <form class="container-fluid justify-content-between">
 
@@ -190,18 +163,19 @@
 
       <!-- our own footer goes here-->
     <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
-        <span class="material-icons"><a href="home.html"><img src = "./images/home_FILL0_wght400_GRAD0_opsz48.png"></a></span>
-        <span class="material-icons"><a href="timetable.html"><img src = "./images/calendar_month_FILL0_wght400_GRAD0_opsz48.png"></a></span>
-        <span class="material-icons"><a href="duedateform.html"><img src="./images/duedate2.png"></a></span>
-        <span class="material-symbols-outlined"><a href="registration.html"><img src = "./images/person_FILL0_wght400_GRAD0_opsz48.png"></a></span>
-      </footer>
-  
-      <!---------------------------------------------->
-      <!-- Your own JavaScript functions go here    -->
-      <!---------------------------------------------->
-      <script src="./scripts/firebaseAPI_TEAM18.js"></script>
-     <script src = "./scripts/duedate.js"></script>
-      
+      <a href="home.html"
+        ><span class="material-symbols-outlined"> home </span></a
+      >
+      <a href="timetable.html"
+        ><span class="material-symbols-outlined"> calendar_month </span></a
+      >
+      <a href="duedate.html"
+        ><span class="material-symbols-outlined"> hourglass_top </span></a
+      >
+      <a href="registration.html"
+        ><span class="material-symbols-outlined"> person </span></a
+      >
+    </footer>
 
             
           

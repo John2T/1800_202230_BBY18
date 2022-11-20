@@ -28,5 +28,15 @@ function writeschedules() {
 });
 }
 
+function updateSchedule() {
+    var schedulesRef = db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy");
+    schedulesRef
+    .update({
+        mon: ["ZpfiEkqWDwbeB7LjsEDF", "QcNPKM0XNkFGVCGnXLDb", "8sjYe3h7LHcq1WJIfNsZ", "6MNrVY7T2C4rtH7azwDn", "dDbRRob1YwL1BdJAYcxX", "SYslQUQyGFIVpcBJKDOf", "9tB2PSjkjJ3SEMwf4O7s", "FfF3s2f1YpVypDxCV3qU", "F2906OmXSKlAJDv9Ievc"],
+        wed: ["EMFaaqvVfvfQ7dxjQmYc","kSwUvCw3CPY7wIWVXKgo", "rXIipTastQn3S8vMQBOY", "uMnAMIVQfTUi19aWKJHW", "Bg39z56QsB28oCvLIx4g", "1gxlzgeQkIYTpkJEejTW", "WpepNCPgqnCl1nuAFh98", "i6AWzxWq0xiHrw05uBhD", "nDlNVmTVDpFZhMtbm8x3"],
+        fri: ["QNv83O7bAJilpwGxeXGU", "IXtQMcNULmmgrlBZsSgZ", "CKEepuROGAP0KtTel38U", "uKqmW1QoblvnAVJX8RN6", "9BM2bbjCMBk9bjnmUOR4", "KiZt3ergH6OhYGggVmkl", "f90RzhEGKrfBWWBphw2s", "6xIu6u1Zwio7gqPbOkwu", "XCL2VQcxWCBYndS0wVNH"]
+    });    
+}
+
 
 
