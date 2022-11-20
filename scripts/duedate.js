@@ -6,21 +6,19 @@ function deleteToDo(currentDoc) {
            
                 var toDelete = db.collection('users').doc(user.uid).collection("toDo").where('id','==',
                 currentDoc);
-                toDelete.get().then(function(querySnapshot) {
-                    querySnapshot.forEach(function(doc) {
+                toDelete.get().then(function(onSnapshot) {
+                    onSnapshot.forEach(function(doc) {
                     doc.ref.delete();
-
-                    
                         })
-                       
-   
-                        
                     })
-                    //window.location.reload(true);
                 }
             })
         }
 
+function deleteRefresh() {
+    window.location.replace("duedate.html");
+}
+           
 function storelocal(currentDoc) {
                 
                 firebase.auth().onAuthStateChanged(function(user) {
@@ -40,9 +38,7 @@ function storelocal(currentDoc) {
                             localStorage.setItem('id', currentDoc);
 
                             console.log(course, type, due, details);
-                            window.location.replace("duedateEdit.html");
-
-                            
+                            window.location.replace("duedateEdit.html");    
                         })
                     }
                 })
@@ -58,8 +54,8 @@ function populateToDo() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         db.collection("users").doc(user.uid).collection("toDo")
-        .get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
+        .get().then((onSnapshot) => {
+            onSnapshot.forEach((doc) => {
 
          
                 var course = doc.data().course;
@@ -95,7 +91,7 @@ function populateToDo() {
                 reviewCard.querySelector('.due').innerHTML = due;   
                 reviewCard.querySelector('.details').innerHTML = details;   
                 reviewCard.querySelector('.docID').innerHTML = currentDoc;   
-                reviewCard.getElementById("delete-button").onclick = ()=>deleteToDo(currentDoc); 
+                reviewCard.getElementById("delete-button").onclick = ()=> deleteToDo(currentDoc);
                 reviewCard.getElementById('edit-button').onclick = ()=>storelocal(currentDoc);
 ;               
                 toDoCard.appendChild(reviewCard);
