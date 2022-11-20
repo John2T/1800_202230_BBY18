@@ -9,6 +9,10 @@
   font-size: 2.5em;
 }
 
+#delete-button{
+    color: gray;
+    font-size:1.25em;
+}
 .material-icons {
     color: white;
     font-size: 2.5em;

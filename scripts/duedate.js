@@ -3,19 +3,23 @@ function deleteToDo(currentDoc) {
 
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-            window.location.replace("duedateEdit.html");
+           
                 var toDelete = db.collection('users').doc(user.uid).collection("toDo").where('id','==',
                 currentDoc);
                 toDelete.get().then(function(querySnapshot) {
                     querySnapshot.forEach(function(doc) {
                     doc.ref.delete();
+
                     
-                        });
-                    });  
+                        })
+                       
+   
+                        
+                    })
+                    //window.location.reload(true);
                 }
-            }) 
-            
-        } 
+            })
+        }
 
 function storelocal(currentDoc) {
                 
@@ -57,14 +61,33 @@ function populateToDo() {
         .get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
 
-
+         
                 var course = doc.data().course;
+                if(doc.data().course == ""){
+                    course = "No course";
+                }
+
                 var type = doc.data().type;
+                if(doc.data().type == ""){
+                  type = "No type";
+                }
+
                 var due = doc.data().due;
+                if(doc.data().due == ""){
+                    due = "No due date";
+                }
+
                 var details = doc.data().details;
+                if(doc.data().details == ""){
+                    details = "No details"
+                }
+
                 var currentDoc = doc.data().id;
 
-                //console.log(course, type, due, details, currentDoc)
+                
+                console.log(course, type, due, details, currentDoc)
+
+
 
                 let reviewCard = toDoTemplate.content.cloneNode(true);
                 reviewCard.querySelector('.course').innerHTML = course;   

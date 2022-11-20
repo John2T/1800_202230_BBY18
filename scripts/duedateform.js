@@ -4,10 +4,15 @@
 
 function addToDo(){
     
+
   let courseName = document.getElementById("course").value;
   let typeName = document.getElementById("type").value; 
   let dueDate = document.getElementById("due").value;
   let taskDetails = document.getElementById("details").value;
+
+
+
+ 
 
   console.log(course, type, due, details);
   

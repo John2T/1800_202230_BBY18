@@ -46,10 +46,10 @@ function saveEdit() {
        type: type,
        due: due,
        details: details,
-            })
-        }
-        window.location.replace("duedate.html")
-    })
+            }).then(() => {
+                location.replace("duedate.html");
+        })
+    }
+})
 }
-
 
