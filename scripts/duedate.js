@@ -9,7 +9,10 @@ function deleteToDo(currentDoc) {
                 toDelete.get().then(function(onSnapshot) {
                     onSnapshot.forEach(function(doc) {
                     doc.ref.delete();
-                        })
+                        })/*.then(() => {
+                            location.replace("duedate.html");
+                    })
+                    */
                     })
                 }
             })
