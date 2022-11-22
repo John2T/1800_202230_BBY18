@@ -1,65 +1,42 @@
-function writeQuotes() {
-  var quotesRef = db.collection("quotes");
+function writeschedules() {
+  //define a variable for the collection you want to create in Firestore to populate data
+  var schedulesRef = db.collection("schedules");
 
-  quotesRef.add({
-    name: "quote1",
-    details:
-      "“All truly great thoughts are conceived by walking.” ~ Friedrich Nietzsche",
+  schedulesRef.add({
+      set:"A",
+      mon:["ZpfiEkqWDwbeB7LjsEDF","QcNPKM0XNkFGVCGnXLDb","8sjYe3h7LHcq1WJIfNsZF","6MNrVY7T2C4rtH7azwDn","dDbRRob1YwL1BdJAYcxX","SYslQUQyGFIVpcBJKDOf","9tB2PSjkjJ3SEMwf4O7s","FfF3s2f1YpVypDxCV3qU","F2906OmXSKlAJDv9Ievc"],
+      thu:["aGbgVHS8WWPwbTBJYajf","Bbv6D4ReDMDPLmSPbD5u","6vJLAQS03a9I0RLvpkCV","cFSZZR6pX2Ypji4CGcG7","JGREKzEkfTcqTgm1yXh4","pMuJVo7YH1y4zICUx7Ri","b3GRJyHfi2uIQzSCsm4O","GHKh7594sRwe0XR5NJYD","dTdE5PDywN6VIYIhu816"],
+      last_updated: firebase.firestore.FieldValue.serverTimestamp()  
   });
-
-  quotesRef.add({
-    name: "quote2",
-    details: "“Don’t let yesterday take up too much of today.” ~ Will Rogers",
-  });
-
-  quotesRef.add({
-    name: "quote3",
-    details: "“It always seems impossible until it’s done.” ~ Nelson Mandela",
-  });
-
-  quotesRef.add({
-    name: "quote4",
-    details:
-      "“Positive anything is better than negative nothing.” ~ Elbert Hubbard",
-  });
-
-  quotesRef.add({
-    name: "quote5",
-    details:
-      "“If you look at what you have in life, you’ll always have more.” ~ Oprah Winfrey",
-  });
-
-  quotesRef.add({
-    name: "quote6",
-    details: "“Every moment is a fresh beginning.” ~ T.S Eliot",
-  });
-
-  quotesRef.add({
-    name: "quote7",
-    details: "“Believe you can and you’re halfway there.” ~ Theodore Roosevelt",
-  });
-
-  quotesRef.add({
-    name: "quote8",
-    details:
-      "“The bad news is time flies. The good news is you’re the pilot.” ~ Michael Altshuler",
-  });
-
-  quotesRef.add({
-    name: "quote9",
-    details:
-      "“A person who never made a mistake never tried anything new.” ~ Albert Einstein",
-  });
-
-  quotesRef.add({
-    name: "quote10",
-    details:
-      "“The roots of education are bitter, but the fruit is sweet.” ~ Aristotle",
-  });
+  schedulesRef.add({
+      set:"B",
+      tue:["NTGvRSPOHdTNqhp9vcZg","Fw5DK9XfceI9tNKMgpVP","wDAMfOZUa0d5g0A06IMF","BPGmN54oq9OVUrhq5yKB","k7OGOJn9lAqIdzDNexfZ","79NrMwTMwN3l6o8iIx4d","AdfQYQVax2jB7RvT9BSA","DvUpPYXGLOBplySuJLso","GpiEy8inFvsCrvuuVfT7"],
+      fri:["QNv83O7bAJilpwGxeXGU","IXtQMcNULmmgrlBZsSgZ","CKEepuROGAP0KtTel38U","uKqmW1QoblvnAVJX8RN6","9BM2bbjCMBk9bjnmUOR4","KiZt3ergH6OhYGggVmkli","f90RzhEGKrfBWWBphw2s","6xIu6u1Zwio7gqPbOkwu","XCL2VQcxWCBYndS0wVNH"],
+      last_updated: firebase.firestore.FieldValue.serverTimestamp()  
+ });
+ schedulesRef.add({
+      set:"C",
+      wed:["EMFaaqvVfvfQ7dxjQmYc","kSwUvCw3CPY7wIWVXKgo","rXIipTastQn3S8vMQBOY","uMnAMIVQfTUi19aWKJHW","Bg39z56QsB28oCvLIx4g","1gxlzgeQkIYTpkJEejTW","WpepNCPgqnCl1nuAFh98","i6AWzxWq0xiHrw05uBhD","nDlNVmTVDpFZhMtbm8x3"],
+      thu:["aGbgVHS8WWPwbTBJYajf","Bbv6D4ReDMDPLmSPbD5u","6vJLAQS03a9I0RLvpkCV","cFSZZR6pX2Ypji4CGcG7","JGREKzEkfTcqTgm1yXh4","pMuJVo7YH1y4zICUx7Ri","b3GRJyHfi2uIQzSCsm4O","GHKh7594sRwe0XR5NJYD","dTdE5PDywN6VIYIhu816"],
+        last_updated: firebase.firestore.FieldValue.serverTimestamp()  
+ });
+ schedulesRef.add({
+      set:"D",
+      tue:["NTGvRSPOHdTNqhp9vcZg","Fw5DK9XfceI9tNKMgpVP","wDAMfOZUa0d5g0A06IMF","BPGmN54oq9OVUrhq5yKB","k7OGOJn9lAqIdzDNexfZ","79NrMwTMwN3l6o8iIx4d","AdfQYQVax2jB7RvT9BSA","DvUpPYXGLOBplySuJLso","GpiEy8inFvsCrvuuVfT7"],
+      thu:["aGbgVHS8WWPwbTBJYajf","Bbv6D4ReDMDPLmSPbD5u","6vJLAQS03a9I0RLvpkCV","cFSZZR6pX2Ypji4CGcG7","JGREKzEkfTcqTgm1yXh4","pMuJVo7YH1y4zICUx7Ri","b3GRJyHfi2uIQzSCsm4O","GHKh7594sRwe0XR5NJYD","dTdE5PDywN6VIYIhu816"],   
+      last_updated: firebase.firestore.FieldValue.serverTimestamp()   
+});
 }
 
-// This function is one-time thing for adding the data to database, so I commented out.
-// writeQuotes();
+function updateSchedule() {
+  var schedulesRef = db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy");
+  schedulesRef
+  .update({
+      mon: ["ZpfiEkqWDwbeB7LjsEDF", "QcNPKM0XNkFGVCGnXLDb", "8sjYe3h7LHcq1WJIfNsZ", "6MNrVY7T2C4rtH7azwDn", "dDbRRob1YwL1BdJAYcxX", "SYslQUQyGFIVpcBJKDOf", "9tB2PSjkjJ3SEMwf4O7s", "FfF3s2f1YpVypDxCV3qU", "F2906OmXSKlAJDv9Ievc"],
+      wed: ["EMFaaqvVfvfQ7dxjQmYc","kSwUvCw3CPY7wIWVXKgo", "rXIipTastQn3S8vMQBOY", "uMnAMIVQfTUi19aWKJHW", "Bg39z56QsB28oCvLIx4g", "1gxlzgeQkIYTpkJEejTW", "WpepNCPgqnCl1nuAFh98", "i6AWzxWq0xiHrw05uBhD", "nDlNVmTVDpFZhMtbm8x3"],
+      fri: ["QNv83O7bAJilpwGxeXGU", "IXtQMcNULmmgrlBZsSgZ", "CKEepuROGAP0KtTel38U", "uKqmW1QoblvnAVJX8RN6", "9BM2bbjCMBk9bjnmUOR4", "KiZt3ergH6OhYGggVmkl", "f90RzhEGKrfBWWBphw2s", "6xIu6u1Zwio7gqPbOkwu", "XCL2VQcxWCBYndS0wVNH"]
+  });    
+}
 
 //Write courses start
 function writeCourses() {
@@ -432,24 +409,6 @@ function writeCourses() {
 //writeCourses();
 //WriteCourses end
 
-function getUsersSet() {
-  firebase.auth().onAuthStateChanged(user => {
-    // Check if user is signed in:
-    if (user) {
-  var currentUser = db.collection("users").doc(user.uid);
-  //get the document for current user.
-  currentUser.get()
-      .then(userDoc => {
-          //get the data fields of the user
-          var userSet = userDoc.data().set;  
-          console.log(userSet);        
-      })
-}
-  })
-}
-
-getUsersSet();
-
 function readSchedule() {
   db.collection("schedules")
     // Need to figure out how to reference the set name from the user registration to in where() function.
@@ -458,7 +417,8 @@ function readSchedule() {
     .then((timetable) => {
       timetable.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());    //Shows the document id that satisfies where() condition on console.
-//Reads the schedule for Monday.
+
+        //Reads the schedule for Monday.
         for (let i = 0; i < 9; i++) {
           var courseID = doc.data().mon[i];
           console.log(courseID);
@@ -547,40 +507,12 @@ function readSchedule() {
                 "\n" +
                 doc.data().location;
             });
-        }
+        }    
       });
     });
-
-  // Codes below is for the reference.
-  // db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy")
-  // .get()
-  // .then(                                            //name of the collection and documents should matach excatly with what you have in Firestore
-  //   timetable => {                                                               //arrow notation
-  //       console.log("current document data: " + timetable.data());    //.data() returns data object
-
-  // for (let i = 0; i < 9; i++) {
-  //     // document.getElementById("t"+i).innerHTML = timetable.data().tue[i];
-  //     var courseID = timetable.data().tue[i];
-  //     console.log(courseID);
-  //     db.collection("courses").doc(courseID).get().then(
-  //       doc => {
-  //         console.log(doc.data().name);
-  //         document.getElementById("t"+i).innerHTML = doc.data().name + "\n" + doc.data().type + "\n" + doc.data().location;
-  //         // document.getElementById("t"+i).innerHTML =
-  //       })
-  // }
-
- 
-
 }
+
 readSchedule(); //calling the function
 
-//-----------------------------------------------
-// Create a "max" number of hike document objects
-//-----------------------------------------------
-// var docData = {
-//      Amon: [COMP1510, true, "hello"],
-//  };
-//  db.collection("timetable").doc("setD").set(docData).then(() => {
-//      console.log("Document successfully written!");
-//  });
+
+

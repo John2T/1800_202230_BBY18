@@ -64,53 +64,40 @@
         </div>
       </div>
         <p> &nbsp; </p>
-
-        <div class="btn-group dropdown">
-          <button class="btn btn-secondary dropdown-toggle d-inline-flex p-2 bd-highlight" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-          </button>
-        
-            <ul class="dropdown-menu dropdown-menu-end"   role="menu" aria-labelledby="dropdownMenuLink">
-              <div class = "justify-content-evenly">
-                <li><a class="dropdown-item" href="Settings.html">Settings</a></li>
-                <li><a class="dropdown-item" href="#">About</a></li>
-                <li><a class="dropdown-item" href="#">Help</a></li>
-              </div>
-            </ul>  
-  
-        </div>
       </nav>
 
     <!-- the body of your page goes here -->
      <p> &nbsp; </p>
 
-     <article class="container border bg-blue-50 border-blue-100 shadow-2xl rounded-2xl p-3 flex-auto" >
+     <span id="welcome-text" class="p-3">&nbsp;Welcome back,</span><span id="username"></span>
+     <br><br>
+<!--      
+     <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto" >
       <h1 class="font-bold text-blue-500 text-center"><span id="time"> </span></h1>
    
-    </article>
+    </article> -->
 
     <p> &nbsp; </p>
 
-    <article class="container border bg-blue-50 border-blue-100 shadow-2xl rounded-2xl p-3 flex-auto" >
-      <h1 class="font-bold text-blue-500">Upcoming</h1>
-      <b class="font-bold text-black"><span id="upcoming-goes-here"></span></b>
-      <p class = "font-bold  text-blue-600 text-center">Always remember that:<span id="quote-go-here" ></span></p>    
-    </article>
+    <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto" >
+      <h1 class="font-bold text-black-500">Upcoming</h1><br>
+      <b class="font-bold text-blue"><span id="upcoming-goes-here"></span></b>
+    </article>   
 
-
-    
-
-     <!--White Space-->
+     <p> &nbsp; </p>
      <p> &nbsp; </p>
 
-    <article class="container bg-blue-50 shadow-2xl rounded-2xl p-2 flex-auto">
-      <h1 class="font-bold text-blue-500">Current</h1>
-      <p class="font-light text-black" ><span id="current-goes-here"></span></p>
+    <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto">
+      <h1 class="font-bold text-black-500">Current</h1><br>
+      <p class="font-light text-blue" ><span id="current-goes-here"></span></p>
     </article>
   
     <p> &nbsp; </p>
+    <p> &nbsp; </p>
+    <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto">
+      <h1 class="font-bold text-black-500">Today's quote</h1><br>
+      <p class = "font-bold text-blue-600 text-center"><span id="quote-go-here" ></span></p><br>  
+    </article>
 
 <!-- component
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
@@ -174,8 +161,8 @@
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_TEAM18.js"></script>
-    <script src="./scripts/time.js"></script>
-    <script src="./scripts/home.js"></script>
+    <!-- <script src="./scripts/time.js"></script> -->
+    <script src="./scripts/home copy.js"></script>
 
 
 

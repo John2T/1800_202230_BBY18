@@ -9,25 +9,29 @@
   font-size: 2.5em;
 }
 
-
-.material-icons {
-    color: white;
-    font-size: 2.5em;
-}
-
 #delete-button{
     color: gray;
     font-size:1.25em;
 }
-
-div .col-head {
-    text-align: center;
+/* 
+.container {
     border: rgb(181, 177, 177) 1px solid;
+    overflow-y: visible;
+} */
+
+div .col-head, .col-time {
+    text-align: center;
+    border: rgba(124, 168, 248, 0.793) 0.5px solid;
+    font-size: 9pt;
+    background-color: rgb(206, 230, 253);
 }
 
 div .col {
     text-align: center;
-    border: rgb(181, 177, 177) 0.5px solid;
+    border: rgba(124, 168, 248, 0.793) 0.5px solid;
+    font-size: 10pt;
+    /* background-color: rgb(203, 212, 253); */
+
 }
 
 a {
@@ -35,6 +39,11 @@ a {
     text-decoration: none;
 }
 
-.container {
-    font-size: 10pt;
+#welcome-text {
+    font-size: 15pt;
+}
+
+#username {
+    font-weight: bold;
+    font-size: 15pt;
 }
