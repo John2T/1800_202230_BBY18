@@ -23,19 +23,19 @@ function displayUserName() {
 
 displayUserName();
 
-//Display current system time on the screen.
-var datetime = new Date();
-console.log(datetime);
-document.getElementById("time").textContent = datetime; //it will print on html page
+// //Display current system time on the screen.
+// var datetime = new Date();
+// console.log(datetime);
+// document.getElementById("time").textContent = datetime; //it will print on html page
 
-//Formatted the time.
-function refreshTime() {
-  const timeDisplay = document.getElementById("time");
-  const dateString = new Date().toLocaleString();
-  const formattedString = dateString.replace(", ", " - ");
-  timeDisplay.textContent = formattedString;
-}
-setInterval(refreshTime, 1000);
+// //Formatted the time.
+// function refreshTime() {
+//   const timeDisplay = document.getElementById("time");
+//   const dateString = new Date().toLocaleString();
+//   const formattedString = dateString.replace(", ", " - ");
+//   timeDisplay.textContent = formattedString;
+// }
+// setInterval(refreshTime, 1000);
 
 function displayRandomquote() {
     db.collection("fun")
@@ -145,9 +145,9 @@ function displayNextSlot(){
         .where("slot", "==", slot)
         .get()
         .then(function (snap){
-            // console.log(doc.data().name);
             snap.forEach(function (doc) {
                 if (doc.data().name != "") {
+                    console.log(doc.data().name);
                     document.getElementById('upcoming-goes-here').innerHTML =
                         doc.data().name +
                         "\r" +
@@ -264,17 +264,18 @@ function displayCurrentSlot(){
             // console.log(doc.data().name);
             snap.forEach(function (doc) {
                 if (doc.data().name != "") {
-                    document.getElementById('upcoming-goes-here').innerHTML =
+                    console.log(doc.data().name);
+                    document.getElementById('current-goes-here').innerHTML =
                         doc.data().name +
                         "\r" +
                         doc.data().type +
                         "\r" +
                         "(Location: "+doc.data().location+")";
                     } else if (doc.data().name == ""){
-                        document.getElementById('upcoming-goes-here').innerHTML =
+                        document.getElementById('current-goes-here').innerHTML =
                         "Break before the next class!";
                     } else {
-                        document.getElementById('upcoming-goes-here').innerHTML =
+                        document.getElementById('current-goes-here').innerHTML =
                         "Reward yourself with a good dinner after a hard day!";
                     }
             })
