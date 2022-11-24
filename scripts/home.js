@@ -190,8 +190,9 @@ function findCurrentSlot(){
         console.log("You should be sleeping!");
 
 }
-findCurrentSlot();
 
+
+findCurrentSlot();
 
 function displayCurrentSlot(){
     db.collection("courses")
