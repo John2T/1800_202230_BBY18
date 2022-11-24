@@ -3,7 +3,6 @@
 var currentUser;
 function displayUserName() {
   firebase.auth().onAuthStateChanged((user) => {
-    // Check if user is signed in:
     if (user) {
       currentUser = db.collection("users").doc(user.uid);
       currentUser.get().then((userDoc) => {
@@ -85,31 +84,49 @@ function findNextSlot() {
   //calculate the slot that will come next in my schedule
   if (hour == 8 && minutes < 30) {
     slot = prefix + "0";
-    console.log("your next block is 8:30 " + slot);
+    var time = "8:30";
+    console.log("your next block is " + time + " " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes < 30)) {
     slot = prefix + "1";
+    time = "9:30";
     console.log("your next block is 9:30 " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 9 && minutes >= 30) || (hour == 10 && minutes < 30)) {
     slot = prefix + "2";
-    console.log("your next block is 10:30 " + slot);
+    time = "10:30";
+    console.log("your next block is " + time + " " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 10 && minutes >= 30) || (hour == 11 && minutes < 30)) {
     slot = prefix + "3";
+    time = "11:30";
     console.log("your next block is 11:30 " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 11 && minutes >= 30) || (hour == 12 && minutes < 30)) {
     slot = prefix + "4";
+    time = "12:30";
     console.log("your next block is 12:30 " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 12 && minutes >= 30) || (hour == 13 && minutes < 30)) {
     slot = prefix + "5";
+    time = "13:30";
     console.log("your next block is 13:30 " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 13 && minutes >= 30) || (hour == 14 && minutes < 30)) {
     slot = prefix + "6";
+    time = "14:30";
     console.log("your next block is 14:30 " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 14 && minutes >= 30) || (hour == 15 && minutes < 30)) {
     slot = prefix + "7";
+    time = "15:30";
     console.log("your next block is 15:30 " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 15 && minutes >= 30) || (hour == 16 && minutes < 30)) {
     slot = prefix + "8";
+    time = "16:30";
     console.log("your next block is 16:30 " + slot);
+    document.getElementById("upcoming-time").innerHTML = time;
   } else if ((hour == 16 && minutes >= 30) || (hour > 17 && hour < 0)) {
     console.log("Reward yourself with a good dinner after a hard day!");
   } else if (hour >= 7 && hour < 8) {
@@ -120,6 +137,24 @@ function findNextSlot() {
   else if (hour >= 0 && hour < 7) console.log("You should be sleeping!");
 }
 findNextSlot();
+
+// function displayNextSlotTime() {
+//   db.collection("courses")
+//     .where("slot", "==", slot)
+//     .get()
+//     .then(function (snap) {
+//       snap.forEach(function (doc) {
+//         if (doc.data().name != "" && doc.data().name != " ") {
+//           document.getElementById("upcoming-goes-here").innerHTML =
+//             doc.data().;
+// }
+
+// function displayNextSlotTime(time) {
+//   console.log(time);
+//   document.getElementById("upcoming-time").innerHTML = time;
+// }
+
+// displayNextSlotTime();
 
 function displayNextSlot() {
   db.collection("courses")
@@ -137,6 +172,8 @@ function displayNextSlot() {
             "(Location: " +
             doc.data().location +
             ")";
+         
+
         } else if (doc.data().name == " ") {
           document.getElementById("upcoming-goes-here").innerHTML = "Break!";
         } else {
@@ -368,14 +405,14 @@ function writefunMessages() {
 //writemessages();
 
 var date = new Date();
+
 function displayUrgentTodo() {
+  console.log(date.setDate(date.getDate() + 7));
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       db.collection("users")
         .doc(user.uid)
         .collection("toDo")
-        // .where("due","<", date.setDate(date.getDate() + 7))
-        .limit(1)
         .get()
         .then((onSnapshot) => {
           onSnapshot.forEach((doc) => {
@@ -383,16 +420,20 @@ function displayUrgentTodo() {
             var courseName = doc.data().course;
             var type = doc.data().type;
             var due = doc.data().due;
-            let dueDate = Date.parse(due);
+            var dueDate = new Date(due);
+            var weekLater = new Date(date.getTime() + 7 * 24 * 60 * 60 * 1000);
+            // date.getDate(date.setDate(date.getDate() + 7));
             console.log("now: " + date.getTime());
-            console.log("due: " + dueDate);
+            console.log("due: " + dueDate.getTime());
             console.log(
-              "week later from today: " + date.setDate(date.getDate() + 7)
+              "week later from today: " + weekLater.getTime()
             );
-            if (dueDate < date.setDate(date.getDate() + 7)) {
+            if (dueDate.getTime() < weekLater.getTime()) {
               var todo =
                 "<p> " + courseName + " " + type + " : due on " + due + "</p>";
               $("#todo-go-here").append(todo);
+            } else {
+              var noshow;
             }
           });
         });

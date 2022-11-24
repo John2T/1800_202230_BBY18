@@ -1,17 +1,14 @@
-// function deleteRefresh() {
-// let deleteButton = document.getElementById("delete-button");
-
-// deleteButton.addEventListener("click", function() {
-//     window.location.reload();
-// })
+// function deleteAlert() {
+//     alert("Are you sure you want to delete?");
 // }
-
 
 function deleteToDo(currentDoc) {
 
+    
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-           
+        confirm("Are you sure you want to delete?");
+        if (confirm) {
                 var toDelete = db.collection('users').doc(user.uid).collection("toDo").where('id','==',
                 currentDoc);
                 toDelete.get().then(function(onSnapshot) {
@@ -24,15 +21,9 @@ function deleteToDo(currentDoc) {
                         })
                     })
                 }
+            }
             })
         }
-
-
-
-
-function deleteRefresh() {
-    window.location.replace("duedate.html");
-}
            
 function storelocal(currentDoc) {
                 
