@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Nanum+Gothic&display=swap');
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -9,34 +10,28 @@
   font-size: 2.5em;
 }
 
-#delete-button{
+#add-button, #edit-button {
+    background-color: #193B5F;
+}
+
+#delete-button {
     color: gray;
     font-size:1.25em;
 }
-/* 
-.container {
-    border: rgb(181, 177, 177) 1px solid;
-    overflow-y: visible;
-} */
 
 div .col-head, .col-time {
     text-align: center;
-    border: rgba(124, 168, 248, 0.793) 0.5px solid;
+    border: #91a9be 0.5px solid;
     font-size: 9pt;
-    background-color: rgb(206, 230, 253);
+    background-color: #e9f7ff;
 }
 
 div .col {
     text-align: center;
-    border: rgba(124, 168, 248, 0.793) 0.5px solid;
+    border: #91a9be 0.5px solid;
     font-size: 10pt;
     /* background-color: rgb(203, 212, 253); */
 
-}
-
-a {
-    color: black;
-    text-decoration: none;
 }
 
 #welcome-text {
@@ -46,4 +41,29 @@ a {
 #username {
     font-weight: bold;
     font-size: 15pt;
+}
+
+.bg-primary {
+    background-color: #607B93 !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #CBEBFC;
+}
+
+
+body {
+    background-color: #CBEBFC;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.navbar-brand{
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+}
+
+.btn-info {
+    background-color: #193B5F;
+    border-color: #89BCE3;
+    color: #CBEBFC;
 }

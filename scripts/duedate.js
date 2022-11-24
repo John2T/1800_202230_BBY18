@@ -1,3 +1,11 @@
+// function deleteRefresh() {
+// let deleteButton = document.getElementById("delete-button");
+
+// deleteButton.addEventListener("click", function() {
+//     window.location.reload();
+// })
+// }
+
 
 function deleteToDo(currentDoc) {
 
@@ -9,14 +17,18 @@ function deleteToDo(currentDoc) {
                 toDelete.get().then(function(onSnapshot) {
                     onSnapshot.forEach(function(doc) {
                     doc.ref.delete();
-                        })/*.then(() => {
-                            location.replace("duedate.html");
-                    })
-                    */
+
+                    setTimeout(function(){
+                        location.reload();
+                     }, 500);
+                        })
                     })
                 }
             })
         }
+
+
+
 
 function deleteRefresh() {
     window.location.replace("duedate.html");

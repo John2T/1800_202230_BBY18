@@ -46,7 +46,7 @@ function writeCourses() {
   //Monday start
   //830-930
   courseRef.add({
-    name: "",
+    name: " ",
     location: "",
     type: "",
     slot: "m0",
@@ -54,7 +54,7 @@ function writeCourses() {
 
   //930-1030
   courseRef.add({
-    name: "",
+    name: " ",
     location: "",
     type: "",
     slot: "m1",
@@ -70,7 +70,7 @@ function writeCourses() {
 
   //1130-1230
   courseRef.add({
-    name: "",
+    name: " ",
     location: "",
     type: "",
     slot: "m3",
@@ -94,7 +94,7 @@ function writeCourses() {
 
   //1430-1530
   courseRef.add({
-    name: "",
+    name: " ",
     location: "",
     type: "",
     slot: "m6",
@@ -102,7 +102,7 @@ function writeCourses() {
 
   //1530-1630
   courseRef.add({
-    name: "",
+    name: " ",
     location: "",
     type: "",
     slot: "m7",
@@ -110,7 +110,7 @@ function writeCourses() {
 
   //1630-1730
   courseRef.add({
-    name: "",
+    name: " ",
     location: "",
     type: "",
     slot: "m8",

@@ -44,7 +44,8 @@
 <link rel="stylesheet" href="./style.css" />
     <!--Tailwind css library-->
     <script src="https://cdn.tailwindcss.com"></script>
-   
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet"> -->
+
    
 
 </head>
@@ -58,7 +59,7 @@
     <!--IMPORTANT hamburger menu not displaying properly-->
     
     <nav class="navbar navbar-light bg-primary">
-      <div class = "d-inline-flex p-2 bd-highlight">
+      <div class = "d-inline-flex p-1 bd-highlight">
         <div class="container-fluid">
           <a class="navbar-brand text-light">Team18</a>
         </div>
@@ -70,7 +71,7 @@
      <p> &nbsp; </p>
 
      <span id="welcome-text" class="p-3">&nbsp;Welcome back,</span><span id="username"></span>
-     <br><br>
+     <br>
 <!--      
      <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto" >
       <h1 class="font-bold text-blue-500 text-center"><span id="time"> </span></h1>
@@ -81,67 +82,28 @@
 
     <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto" >
       <h1 class="font-bold text-black-500">Upcoming</h1><br>
-      <b class="font-bold text-blue"><span id="upcoming-goes-here"></span></b>
+      <b class="h5 font-light text-blue"><span id="upcoming-goes-here"></span></b>
     </article>   
 
-     <p> &nbsp; </p>
      <p> &nbsp; </p>
 
     <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto">
       <h1 class="font-bold text-black-500">Current</h1><br>
-      <p class="font-light text-blue" ><span id="current-goes-here"></span></p>
+      <p class="h5 font-light text-blue" ><span id="current-goes-here"></span></p>
     </article>
   
     <p> &nbsp; </p>
-    <p> &nbsp; </p>
     <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto">
       <h1 class="font-bold text-black-500">Today's quote</h1><br>
-      <p class = "font-bold text-blue-600 text-center"><span id="quote-go-here" ></span></p><br>  
+      <p class = "lead font-bold text-blue-800 text-center"><span id="quote-go-here" ></span></p><br>  
     </article>
 
-<!-- component
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
-<style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
+    <p> &nbsp; </p>
+    <article class="container border bg-blue-50 border-blue-100 rounded-2xl p-3 flex-auto">
+      <h1 class="font-bold text-black-500">Urgent To-do</h1><br>
+      <p class = "lead font-light text-blue-800 text-center"><span id="todo-go-here" ></span></p>  
+    </article>
 
-<div class="min-w-screen min-h-screen bg-blue-50 shadow-2xl rounded-2xl p-2 flex-auto overflow-hidden">
-    <div class="w-full mx-auto rounded-lg border border-black text-blue-500 "style="max-width: 800px" x-data="todolist()" x-init="addItem()">
-        <div class="mb-10">
-            <h1 class="text-2xl font-bold flex-auto">To-Do</h1>
-        </div>
-        <div class="mb-10">
-            <template x-if="todos.length">
-                <ul @click.away="defocusItems()" class="-mx-1">
-                    <template x-for="(item,index) in todos">
-                        <li @click="focusItem(index)" @dblclick="openItem(index)" class="px-2 py-2 rounded transition-all flex text-md" :class="{'bg-blue-500':item.focused,'bg-blue-50 shadow-lg px-4 py-4 my-10 -mx-2':item.open,'mb-1 cursor-pointer':!item.open}" :key="index">
-                            <div class="flex-none w-10 leading-none">
-                                <input type="checkbox" :checked="item.checked" @click="item.checked=!item.checked">
-                            </div>
-                            <div class="flex-grow max-w-full">
-                                <div class="w-full leading-none">
-                                    <h3 class="text-md leading-none truncate w-full pr-10" :class="item.title.length?'text-black':'text-gray-500'" x-text="item.title||'New todo...'" x-show="!item.open"></h3>
-                                    <input type="text" x-show="item.open" class="text-md w-full bg-transparent text-black leading-none focus:outline-none mb-2" x-model="item.title" :id="`titleField${index}`" placeholder="New todo..."/>
-                                </div>
-                                <div class="w-full" x-show="item.open">
-                                    <textarea class="text-md w-full bg-transparent text-black leading-tight focus:outline-none" rows="10" x-model="item.notes" placeholder="Notes"></textarea>
-                                </div>
-                                <div class="w-full flex justify-end" x-show="item.open">
-                                    <button class="p-1 -mr-1 focus:outline-none hover:text-black" @click="removeItem(index)"><i class="mdi mdi-trash-can-outline"></i></button>
-                                </div>
-                            </div>
-                        </li>
-                    </template>
-                </ul>
-            </template>
-            <template x-if="!todos.length">
-                <p class="text-black">No todos</p>
-            </template>
-        </div>
-        <div class="flex justify-center">
-            <button class="py-1 px-10 border border-black hover:text-black rounded leading-none focus:outline-none text-xl" @click="addItem()"><i class="mdi mdi-plus"></i></button>
-        </div>
-    </div>
-</div> -->
-    <!-- our own footer goes here-->
     <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
       <a href="home.html"
         ><span class="material-symbols-outlined"> home </span></a
