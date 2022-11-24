@@ -146,7 +146,7 @@ function displayNextSlot() {
       });
     });
 }
-// displayNextSlot();
+displayNextSlot();
 
 function findCurrentSlot() {
   //get current date and time
@@ -247,7 +247,7 @@ function displayCurrentSlot() {
     });
 }
 
-// displayCurrentSlot();
+displayCurrentSlot();
 
 //Add quotes data to Firestore.
 function writeQuotes() {
