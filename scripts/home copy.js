@@ -17,19 +17,37 @@ function displayUserName() {
 
 displayUserName();
 
-// //Display current system time on the screen.
-// var datetime = new Date();
-// console.log(datetime);
-// document.getElementById("time").textContent = datetime; //it will print on html page
+ //Display current system time on the screen.
+ var datetime = new Date();
+ console.log(datetime);
+ document.getElementById("time").textContent = datetime; //it will print on html page
 
-// //Formatted the time.
-// function refreshTime() {
-//   const timeDisplay = document.getElementById("time");
-//   const dateString = new Date().toLocaleString();
-//   const formattedString = dateString.replace(", ", " - ");
-//   timeDisplay.textContent = formattedString;
-// }
-// setInterval(refreshTime, 1000);
+ //Formatted the time.
+ function refreshTime() {
+   const timeDisplay = document.getElementById("time");
+   const dateString = new Date().toLocaleString();
+   const formattedString = dateString.replace(", ", " - ");
+   timeDisplay.textContent = formattedString;
+   const dayDisplay = document.getElementById("day");
+   var day = datetime.getDay();
+   if (day == 0) {
+      day = "Sunday";
+   } else if ( day == 1) {
+    day = "Monday";
+   }else if ( day == 2) {
+    day = "Tuesday";
+   }else if ( day == 3) {
+    day = "Wednesday";
+   }else if ( day == 4) {
+    day = "Thrusday";
+   }else if ( day == 5) {
+    day = "Friday";
+   }else if ( day == 6) {
+    day = "Sunday";
+   }
+   dayDisplay.textContent = day; 
+}
+ setInterval(refreshTime, 1000);
 
 function displayRandomquote() {
   db.collection("fun")

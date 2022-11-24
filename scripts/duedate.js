@@ -89,8 +89,6 @@ function populateToDo() {
                 
                 console.log(course, type, due, details, currentDoc)
 
-
-
                 let reviewCard = toDoTemplate.content.cloneNode(true);
                 reviewCard.querySelector('.course').innerHTML = course;   
                 reviewCard.querySelector('.type').innerHTML = type;   

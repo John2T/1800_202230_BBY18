@@ -43,6 +43,14 @@ div .col {
     font-size: 15pt;
 }
 
+#day {
+    font-size: 12pt;
+}
+
+#time {
+    font-size: 12pt;
+}
+
 .bg-primary {
     background-color: #607B93 !important;
 }
@@ -55,6 +63,7 @@ div .col {
 body {
     background-color: #CBEBFC;
     font-family: 'Nanum Gothic', sans-serif;
+    margin-bottom: 75px;
 }
 
 .navbar-brand{
