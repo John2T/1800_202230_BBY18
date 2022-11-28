@@ -4,7 +4,6 @@
 
 function deleteToDo(currentDoc) {
 
-    
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         confirm("Are you sure you want to delete?");
@@ -88,6 +87,8 @@ function populateToDo() {
 
                 
                 console.log(course, type, due, details, currentDoc)
+
+
 
                 let reviewCard = toDoTemplate.content.cloneNode(true);
                 reviewCard.querySelector('.course').innerHTML = course;   
