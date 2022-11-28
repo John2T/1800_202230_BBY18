@@ -440,19 +440,14 @@ function displayUrgentTodo() {
             var due = doc.data().due;
             var dueDate = new Date(due);
             var weekLater = new Date(date.getTime() + 7 * 24 * 60 * 60 * 1000);
-            // date.getDate(date.setDate(date.getDate() + 7));
             console.log("now: " + date.getTime());
             console.log("due: " + dueDate.getTime());
-            console.log(
-              "week later from today: " + weekLater.getTime()
-            );
+            console.log("week later from today: " + weekLater.getTime());
             if (dueDate.getTime() < weekLater.getTime()) {
               var todo =
                 "<p> " + courseName + " " + type + " : due on " + due + "</p>";
               $("#todo-go-here").append(todo);
-            } else {
-              var noshow;
-            }
+            } 
           });
         });
     }
