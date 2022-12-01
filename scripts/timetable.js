@@ -1,5 +1,5 @@
 /**
- * This function writes the 
+ * This function writes the schedule on Firestore.
  */
 function writeschedules() {
   //define a variable for the collection you want to create in Firestore to populate data
