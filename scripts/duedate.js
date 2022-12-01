@@ -1,5 +1,4 @@
 
-//Deletes a to do card, Uses currentDoc as a parameter which is the firebase document ID to search for the document it's linked to and deletes it.
 function deleteToDo(currentDoc) {
 
     firebase.auth().onAuthStateChanged(function(user) {
@@ -21,8 +20,7 @@ function deleteToDo(currentDoc) {
             }
             })
         }
-   
-//Uses currentDoc has a parameter which is the firebase documentID to search for the document and store it within the local storage and displays it on the edit page
+           
 function storelocal(currentDoc) {
                 
                 firebase.auth().onAuthStateChanged(function(user) {
@@ -49,7 +47,7 @@ function storelocal(currentDoc) {
             }
 
 
-//Reads documents within the user subcollection toDo and populates it with cards dynamically
+
 function populateToDo() {
 
     let toDoTemplate = document.getElementById("CardTemplate");
