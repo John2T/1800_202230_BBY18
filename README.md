@@ -5,19 +5,14 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
-* Hi my name is Nain. I'm excited about this project because I love Java. VERY MUCH!
-* Greetings this is John!
-* Hi my name is Yeju. I'm excited about this project because it is the first time doing project with people together.
-*Hi my name is Nain. I'm excited about this project because I love Java.
-* Greetings this is John! 2nd Time.
-	
+This browser based web application to help fellow students of BCIT CST's set D help manage their schedule and due dates.
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap 
-* ...
+* TailWind 
 	
 ## Content
 Content of the project folder:
@@ -25,25 +20,58 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
-└── README.md
-
-It has the following subfolders and files:
-├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    /blah.jpg                # 
-├── scripts                  # Folder for scripts
-    /blah.js                 # 
-├── styles                   # Folder for styles
-    /blah.css                # 
+└──  README.md               # Read ME!
 
 Firebase hosting files: 
-├── .firebaserc...
+├── .firebase
+	/hosting..cache
+├── .firebaserc
+├── 404.html
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+├── storage.rules
 
 
+
+It has the following subfolders and files:
+├── images                   # Folder for images
+    /who-are-you.jpg         # 
+├── scripts                  # Folder for scripts
+    /authentication.js       # js for login page
+    /duedate.js              # js for duedate page
+    /duedateEdit.js          # js for duedateEdit page
+    /duedateform.js          # js for duedateform page
+    /firebaseAPI_TEAM18.js   # js for firebase link
+    /home.js                 # js for home page
+    /registration.js         # js for registration page
+    /timetable.js            # js for timetable page
+├── css                      # Folder for styles
+    /style.css               # 
+
+├── html                     # Folder for html pages
+    /confirm.html            # Confirmation page, notifies user that their input is saved
+    /duedate.html            # duedate page, displayed current duedates dynamically
+    /duedateEdit.html        # duedate edit page, allows user to edit a to do task
+    /duedateform.html        # duedateform page, a form that allows user to input fields that will be displayed on duedate page
+    /home.html               # home page after logging in
+    /index.html              # login/sign up page
+    /login.html              # This page displayed the firebase login widget
+    /registration.html       # This page displays account information allowing users to make any edits
+    /timetable.html          # Displays the user's timetable
 ```
 
-Tips for file naming files and folders:
-* use lowercase with no spaces
-* use dashes (not underscore) for word separation
+
+Acknowledgements:
+Google Icon Library
+<a href = "https://fonts.google.com/icons">Google Icons</a>
+
+TailWind
+<a href = "https://tailwindcss.com/">Tailwind CSS</a>
+
+BootStrap
+<a href = "https://getbootstrap.com/">BootStrap</a>
+
+Who-are-you-image
+<a href = "https://shouthearing.com.au/wp-content/uploads/2017/07/who-are-you.jpg">Who are you?</a>
 
