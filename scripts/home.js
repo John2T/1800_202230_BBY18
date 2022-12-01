@@ -50,6 +50,8 @@ displayUserName();
 }
  setInterval(refreshTime, 1000);
 
+
+ //choose a random message from the fun collection
 function displayRandomquote() {
   db.collection("fun")
     .where("number", ">", Math.floor(Math.random() * 100))
@@ -130,7 +132,7 @@ function findNextSlot() {
       prefix = "f";
       break;
     default: //0&6 weekend,using t when texting
-      prefix = "t";
+      prefix = "x";
       break;
   }
 
@@ -252,7 +254,7 @@ function findCurrentSlot() {
       prefix = "f";
       break;
     default: //0&6 weekend should be x, using t when texting
-      prefix = "t";
+      prefix = "x";
       break;
   }
 
@@ -260,7 +262,7 @@ function findCurrentSlot() {
   var hour = date.getHours(); //returns 0-23
   var minutes = date.getMinutes(); //returns 0-59
 
-  //calculate the slot that will come next in my schedule
+  //calculate the current slot 
   if (hour == 8 && minutes < 30) {
     console.log("Get ready for the first class.");
   } else if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes < 30)) {
@@ -301,6 +303,7 @@ function findCurrentSlot() {
 }
 findCurrentSlot();
 
+// display the current slot on home page
 function displayCurrentSlot() {
   db.collection("courses")
     .where("slot", "==", slotC)
@@ -333,7 +336,7 @@ displayCurrentSlot();
 // writeQuotes();
 
 //----------------------------------------------------
-// write a whole bunch of messages to the fun collection
+// write a whole bunch of messages to the fun collection, give each message a random number
 //----------------------------------------------------
 function writefunMessages() {
   var messagesRef = db.collection("fun");

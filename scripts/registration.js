@@ -1,4 +1,7 @@
 var currentUser //put this right after you start script tag before writing any functions.
+
+
+//populate user's information
 function populateInfo() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
@@ -43,11 +46,15 @@ function populateInfo() {
 //call the function to run it 
 populateInfo();
 
+
+//alower users to edit their information
 function editUserInfo() {
     //Enable the form fields
     document.getElementById('personalInfoFields').disabled = false;
 }
 
+
+//save the new info
 function saveUserInfo() {
     userName = document.getElementById('nameInput').value; //get the value of the field with id="nameInput"
     userSchool = document.getElementById('schoolInput').value; //get the value of the field with id="schoolInput"
