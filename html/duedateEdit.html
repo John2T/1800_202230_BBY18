@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
   <head>
     <head>
-      <title>LifeSaver</title>
+      <title>My BCIT Project</title>
       <meta name="comp1800 template" content="My 1800 App">
   
       <!------------------------>
@@ -36,146 +39,101 @@
       <!-- Other libraries and styles of your own -->
       <!-------------------------------------------->
 
-      <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link rel="stylesheet" href="./style.css" />
-      
-      <!--Tailwind css library-->
-      <script src="https://cdn.tailwindcss.com"></script>
-   
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--Tailwind css library-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
   </head>
 
-  <body>
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
-    <!------------------------------top-navbar-------------------->
-    <nav class="navbar navbar-light bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand text-light">LifeSaver</a>
-      </div>
-    </nav>
-    
-<!-- form -->
-<div class="flex items-center justify-center p-12">
-  <div class="mx-auto w-full max-w-[550px]">
-    <form>
-      <div class="mb-5">
-        <label
-          for="name"
-          class="mb-3 block text-base font-medium text-[#07074D]"
-        >
-    Course
-        </label>
-        <input
-          type="text"
-          name="course"
-          id="course"
-          placeholder="Course Name"
-          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        />
-      </div>
-      <div class="mb-5">
-        <label
-          for="type"
-          class="mb-3 block text-base font-medium text-[#07074D]"
-        >
-          Type:
-        </label>
-        <input
-          type="text"
-          name="type"
-          id="type"
-          placeholder="Ex: Lab 2, Assignment 3"
-          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        />
-      </div>
-      <div class="mb-5">
-        <label
-          for="subject"
-          class="mb-3 block text-base font-medium text-[#07074D]"
-        >
-          Due Date
-        </label>
-        <input
-          type="date"
-          name="due"
-          id="due"
-          placeholder="Enter the due date"
-          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        />
-      </div>
-      <div class="mb-5">
-        <label
-          for="due"
-          class="mb-3 block text-base font-medium text-[#07074D]"
-        >
-          Additional Details
-        </label>
-        <input
-          type = "text"
-          rows="4"
-          name="details"
-          id="details"
-          placeholder="Type your message"
-          class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        >
-      </div>
-      <div>
-       
-        <button
-          type = "button"
-          class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 text-base font-semibold text-white outline-none"
-          onclick="saveEdit()">
-          Save
-        </button>
-      
+<body>
+  <!------------------------------>
+  <!-- Your HTML Layout go here -->
+  <!------------------------------>
+  <!------------------------------top-navbar-------------------->
+  <nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light">LifeSaver</a>
+    </div>
+  </nav>
 
-        <a href = "duedate.html">
-        <button
-          type = "button"
-          class="hover:shadow-form rounded-md bg-gray-400 py-3 px-8 text-base font-semibold text-white outline-none"
-          >
-          Cancel
-        </button>
-       </a>  
-     
-      </div>
-    </form>
+  <!-- form -->
+  <div class="flex items-center justify-center p-12">
+    <div class="mx-auto w-full max-w-[550px]">
+      <form>
+        <div class="mb-5">
+          <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
+            Course
+          </label>
+          <input type="text" name="course" id="course" placeholder="Course Name"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label for="type" class="mb-3 block text-base font-medium text-[#07074D]">
+            Type:
+          </label>
+          <input type="text" name="type" id="type" placeholder="Ex: Lab 2, Assignment 3"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label for="subject" class="mb-3 block text-base font-medium text-[#07074D]">
+            Due Date
+          </label>
+          <input type="date" name="due" id="due" placeholder="Enter the due date"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label for="due" class="mb-3 block text-base font-medium text-[#07074D]">
+            Additional Details
+          </label>
+          <input type="text" rows="4" name="details" id="details" placeholder="Type your message"
+            class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
+        </div>
+        <div>
+
+          <button type="button"
+            class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 text-base font-semibold text-white outline-none"
+            onclick="saveEdit()">
+            Save
+          </button>
+
+
+          <a href="duedate.html">
+            <button type="button"
+              class="hover:shadow-form rounded-md bg-gray-400 py-3 px-8 text-base font-semibold text-white outline-none">
+              Cancel
+            </button>
+          </a>
+
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 
 
 
 
 
-    <!------------------------------footer-------------------->
-    <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
-      <a href="home.html"
-        ><span class="material-symbols-outlined"> home </span></a
-      >
-      <a href="timetable.html"
-        ><span class="material-symbols-outlined"> calendar_month </span></a
-      >
-      <a href="duedate.html"
-        ><span class="material-symbols-outlined"> hourglass_top </span></a
-      >
-      <a href="registration.html"
-        ><span class="material-symbols-outlined"> person </span></a
-      >
-    </footer>
+  <!------------------------------footer-------------------->
+  <footer class="navbar justify-content-evenly bg-primary fixed-bottom">
+    <a href="home.html"><span class="material-symbols-outlined"> home </span></a>
+    <a href="timetable.html"><span class="material-symbols-outlined"> calendar_month </span></a>
+    <a href="duedate.html"><span class="material-symbols-outlined"> hourglass_top </span></a>
+    <a href="registration.html"><span class="material-symbols-outlined"> person </span></a>
+  </footer>
 
 
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
 
-    <!-- Link to scripts of your own -->
-    <script src="./scripts/firebaseAPI_TEAM18.js"></script>
-    <script src = "./scripts/duedateEdit.js"></script>
+  <!-- Link to scripts of your own -->
+  <script src="./scripts/firebaseAPI_TEAM18.js"></script>
+  <script src="./scripts/duedateEdit.js"></script>
 
-  </body>
-  </head>
+</body>
+</head>
+
 </html>

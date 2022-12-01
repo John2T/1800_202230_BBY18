@@ -1,5 +1,6 @@
-function populateEdit(){
 
+//Reads from the local storage and displays the it in the appropiate places within the html
+function populateEdit(){
     var course = localStorage.getItem('course');
     var type = localStorage.getItem('type');
     var due= localStorage.getItem('due');
@@ -30,6 +31,7 @@ function populateEdit(){
 
 populateEdit();
 
+//Reads the data value from html user inputs and updates the firebase accordingly.
 function saveEdit() {
     firebase.auth().onAuthStateChanged(function(user) {
         var id = localStorage.getItem("id");

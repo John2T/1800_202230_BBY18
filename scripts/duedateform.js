@@ -1,3 +1,4 @@
+//Reads data from 
 function addToDo() {
   let courseName = document.getElementById("course").value;
   let typeName = document.getElementById("type").value;
