@@ -1,5 +1,6 @@
-//This is the edited version of home.js
-
+/**
+ * This function displays the current user's name on the top of the homepage.
+ */
 var currentUser;
 function displayUserName() {
   firebase.auth().onAuthStateChanged((user) => {
@@ -65,6 +66,9 @@ function displayRandomquote() {
 }
 displayRandomquote();
 
+/**
+ * This function displays the tasks that are due in the next 3 days.
+ */
 var date = new Date();
 
 function displayUrgentTodo() {
@@ -86,6 +90,7 @@ function displayUrgentTodo() {
             console.log("now: " + date.getTime());
             console.log("due: " + dueDate.getTime());
             console.log("3 days from today: " + inThreeDays.getTime());
+            //Compares the due date of the assignment to 3 days later date.
             if (dueDate.getTime() < inThreeDays.getTime()) {
               var todo =
                 "<p> " + courseName + " " + type + " : due on " + due + "</p>";
@@ -323,67 +328,6 @@ function displayCurrentSlot() {
 }
 
 displayCurrentSlot();
-
-//Add quotes data to Firestore.
-function writeQuotes() {
-  var quotesRef = db.collection("quotes");
-
-  quotesRef.add({
-    name: "quote1",
-    details:
-      "“All truly great thoughts are conceived by walking.” ~ Friedrich Nietzsche",
-  });
-
-  quotesRef.add({
-    name: "quote2",
-    details: "“Don’t let yesterday take up too much of today.” ~ Will Rogers",
-  });
-
-  quotesRef.add({
-    name: "quote3",
-    details: "“It always seems impossible until it’s done.” ~ Nelson Mandela",
-  });
-
-  quotesRef.add({
-    name: "quote4",
-    details:
-      "“Positive anything is better than negative nothing.” ~ Elbert Hubbard",
-  });
-
-  quotesRef.add({
-    name: "quote5",
-    details:
-      "“If you look at what you have in life, you’ll always have more.” ~ Oprah Winfrey",
-  });
-
-  quotesRef.add({
-    name: "quote6",
-    details: "“Every moment is a fresh beginning.” ~ T.S Eliot",
-  });
-
-  quotesRef.add({
-    name: "quote7",
-    details: "“Believe you can and you’re halfway there.” ~ Theodore Roosevelt",
-  });
-
-  quotesRef.add({
-    name: "quote8",
-    details:
-      "“The bad news is time flies. The good news is you’re the pilot.” ~ Michael Altshuler",
-  });
-
-  quotesRef.add({
-    name: "quote9",
-    details:
-      "“A person who never made a mistake never tried anything new.” ~ Albert Einstein",
-  });
-
-  quotesRef.add({
-    name: "quote10",
-    details:
-      "“The roots of education are bitter, but the fruit is sweet.” ~ Aristotle",
-  });
-}
 
 // This function is one-time thing for adding the data to database, so I commented out.
 // writeQuotes();

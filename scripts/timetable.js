@@ -1,3 +1,6 @@
+/**
+ * This function writes the schedule on Firestore.
+ */
 function writeschedules() {
   //define a variable for the collection you want to create in Firestore to populate data
   var schedulesRef = db.collection("schedules");
@@ -409,9 +412,11 @@ function writeCourses() {
 //writeCourses();
 //WriteCourses end
 
+/**
+ * This function reads the course schedule from the Firestore using 'course' and 'schedule' collection. 
+ */
 function readSchedule() {
   db.collection("schedules")
-    // Need to figure out how to reference the set name from the user registration to in where() function.
     .where("set", "==", "D")
     .get()
     .then((timetable) => {
