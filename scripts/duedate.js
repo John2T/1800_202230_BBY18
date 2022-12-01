@@ -1,5 +1,9 @@
 
-//Deletes a to do card, Uses currentDoc as a parameter which is the firebase document ID to search for the document it's linked to and deletes it.
+/**
+ * deleteToDo takes currentDoc as a parameter. Current Doc is linked to a firebase document within the user's subcollection toDo. Delete function searches the 
+ * firebase until it finds a document that matches the parameter and then deletes. Page (dueDate) is then reloaded and then the user can see their now updated currents todo tasks.
+ * @param {string} currentDoc - A variable contains a string
+ */
 function deleteToDo(currentDoc) {
 
     firebase.auth().onAuthStateChanged(function(user) {
@@ -22,7 +26,13 @@ function deleteToDo(currentDoc) {
             })
         }
    
-//Uses currentDoc has a parameter which is the firebase documentID to search for the document and store it within the local storage and displays it on the edit page
+
+/**
+ * storeLocal takes currentDoc as a parameter and searches for its corresponding firebase document within the user's subcollection.
+ * This is then stored in the local storage and the user is redirected to the duedateEdit page. This function works in tandem with the function 
+ * populateEdit in the duedateEdit.js
+ * @param {string} currentDoc - A variable contains a string
+ */
 function storelocal(currentDoc) {
                 
                 firebase.auth().onAuthStateChanged(function(user) {
@@ -49,7 +59,10 @@ function storelocal(currentDoc) {
             }
 
 
-//Reads documents within the user subcollection toDo and populates it with cards dynamically
+/**
+ * populateToDo verifies that a user is logged in and then searches the user's todo subcollection. For each document within the todo dollection a card is created
+ * and is populated with data fields from the document. This is then displayed dynamically on the duedate page.
+ */
 function populateToDo() {
 
     let toDoTemplate = document.getElementById("CardTemplate");
@@ -61,7 +74,9 @@ function populateToDo() {
         .get().then((onSnapshot) => {
             onSnapshot.forEach((doc) => {
 
-         
+                /**
+                 * If any fields are left blank the following data will be inputted as a place holder.
+                 */
                 var course = doc.data().course;
                 if(doc.data().course == ""){
                     course = "No course";
@@ -88,7 +103,9 @@ function populateToDo() {
                 console.log(course, type, due, details, currentDoc)
 
 
-
+                /**
+                 * Data fields from document of firebase is now populating html aspects of the card template.
+                 */
                 let reviewCard = toDoTemplate.content.cloneNode(true);
                 reviewCard.querySelector('.course').innerHTML = course;   
                 reviewCard.querySelector('.type').innerHTML = type;   

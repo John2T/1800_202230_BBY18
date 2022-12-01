@@ -1,4 +1,7 @@
-//Reads data from 
+/**
+ * The addToD0 function reads data from the html text fields from the user. Upon clicking the add button a subcollection called toDo is created for a user and data from the html form 
+ * is then added as a document within the todo subcollection.
+ */
 function addToDo() {
   let courseName = document.getElementById("course").value;
   let typeName = document.getElementById("type").value;
@@ -7,15 +10,6 @@ function addToDo() {
 
   console.log(course, type, due, details);
 
-  // if (
-  //   courseName == "" &&
-  //   typeName == "" &&
-  //   dueDate == "" &&
-  //   taskDetails == ""
-  // ) {
-  //   confirm("There is no content. Do you still want to add it?");
-
-  //   if (confirm) {
       firebase.auth().onAuthStateChanged((user) => {
         if (user) {
           var currentUser = db
@@ -43,9 +37,5 @@ function addToDo() {
             });
         }
       });
-      //  else {
-      //   window.location.reload();
-      // }
     }
-//   }
-// }
+
