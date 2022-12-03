@@ -60,6 +60,13 @@ function editUserInfo() {
  * save the new info.
  */
 function saveUserInfo() {
+    firebase.auth().onAuthStateChanged(user => {
+        // Check if user is signed in:
+        if (user) {
+
+            //go to the correct user document by referencing to the user uid
+            currentUser = db.collection("users").doc(user.uid)
+
     userName = document.getElementById('nameInput').value; //get the value of the field with id="nameInput"
     userSchool = document.getElementById('schoolInput').value; //get the value of the field with id="schoolInput"
     userProgram = document.getElementById('programInput').value; //get the value of the field with id="programInput"
@@ -75,5 +82,8 @@ function saveUserInfo() {
     })
     .then(() => {
         console.log("Document successfully updated!");
+        location.href = "confirm.html";
+    })
+        }
     })
 }
