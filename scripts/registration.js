@@ -71,7 +71,7 @@ function saveUserInfo() {
         school: userSchool,
         program: userProgram,
         term:userTerm,
-        set:userSet,
+        set:userSet
     })
     .then(() => {
         console.log("Document successfully updated!");
