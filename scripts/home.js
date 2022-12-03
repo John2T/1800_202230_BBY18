@@ -18,7 +18,10 @@ function displayUserName() {
 
 displayUserName();
 
- //Display current system time on the screen.
+ 
+ /**
+ * Display current system time on the screen.
+ */
  var datetime = new Date();
  console.log(datetime);
  document.getElementById("time").textContent = datetime; //it will print on html page
@@ -50,8 +53,9 @@ displayUserName();
 }
  setInterval(refreshTime, 1000);
 
-
- //choose a random message from the fun collection
+/**
+ * choose a random message from the fun collection
+*/
 function displayRandomquote() {
   db.collection("fun")
     .where("number", ">", Math.floor(Math.random() * 100))
@@ -107,7 +111,9 @@ function displayUrgentTodo() {
 displayUrgentTodo();
 
 
-
+/**
+ * Find next slot.
+ */
 function findNextSlot() {
   //get current date and time
   var date = new Date();
@@ -131,7 +137,7 @@ function findNextSlot() {
     case 5:
       prefix = "f";
       break;
-    default: //0&6 weekend,using t when texting
+    default: 
       prefix = "x";
       break;
   }
@@ -200,7 +206,9 @@ function findNextSlot() {
 findNextSlot();
 
 
-
+/**
+ * display next slot.
+ */
 function displayNextSlot() {
   db.collection("courses")
     .where("slot", "==", slot)
@@ -230,6 +238,9 @@ function displayNextSlot() {
 }
 displayNextSlot();
 
+/**
+ * Find current slot.
+ */
 function findCurrentSlot() {
   //get current date and time
   var date = new Date();
@@ -253,7 +264,7 @@ function findCurrentSlot() {
     case 5:
       prefix = "f";
       break;
-    default: //0&6 weekend should be x, using t when texting
+    default: 
       prefix = "x";
       break;
   }
@@ -303,7 +314,9 @@ function findCurrentSlot() {
 }
 findCurrentSlot();
 
-// display the current slot on home page
+/**
+ * Display next slot.
+ */
 function displayCurrentSlot() {
   db.collection("courses")
     .where("slot", "==", slotC)
@@ -335,9 +348,10 @@ displayCurrentSlot();
 // This function is one-time thing for adding the data to database, so I commented out.
 // writeQuotes();
 
-//----------------------------------------------------
-// write a whole bunch of messages to the fun collection, give each message a random number
-//----------------------------------------------------
+
+/**
+ * write ten messages to the fun collection, give each message a random number.
+ */
 function writefunMessages() {
   var messagesRef = db.collection("fun");
   messagesRef.add({
