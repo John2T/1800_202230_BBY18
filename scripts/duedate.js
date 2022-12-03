@@ -8,14 +8,13 @@ function deleteToDo(currentDoc) {
 
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        confirm("Are you sure you want to delete?");
-        if (confirm) {
+        var status = confirm("Are you sure you want to delete?")
+        if (status) {
                 var toDelete = db.collection('users').doc(user.uid).collection("toDo").where('id','==',
                 currentDoc);
                 toDelete.get().then(function(onSnapshot) {
                     onSnapshot.forEach(function(doc) {
                     doc.ref.delete();
-
                     setTimeout(function(){
                         location.reload();
                      }, 500);
