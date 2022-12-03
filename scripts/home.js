@@ -18,44 +18,43 @@ function displayUserName() {
 
 displayUserName();
 
- 
- /**
+/**
  * Display current system time on the screen.
  */
- var datetime = new Date();
- console.log(datetime);
- document.getElementById("time").textContent = datetime; //it will print on html page
+var datetime = new Date();
+console.log(datetime);
+document.getElementById("time").textContent = datetime; //it will print on html page
 
- //Formatted the time.
- function refreshTime() {
-   const timeDisplay = document.getElementById("time");
-   const dateString = new Date().toLocaleString();
-   const formattedString = dateString.replace(", ", " - ");
-   timeDisplay.textContent = formattedString;
-   const dayDisplay = document.getElementById("day");
-   var day = datetime.getDay();
-   if (day == 0) {
-      day = "Sunday";
-   } else if ( day == 1) {
-    day = "Monday";
-   }else if ( day == 2) {
-    day = "Tuesday";
-   }else if ( day == 3) {
-    day = "Wednesday";
-   }else if ( day == 4) {
-    day = "Thrusday";
-   }else if ( day == 5) {
-    day = "Friday";
-   }else if ( day == 6) {
+//Formatted the time.
+function refreshTime() {
+  const timeDisplay = document.getElementById("time");
+  const dateString = new Date().toLocaleString();
+  const formattedString = dateString.replace(", ", " - ");
+  timeDisplay.textContent = formattedString;
+  const dayDisplay = document.getElementById("day");
+  var day = datetime.getDay();
+  if (day == 0) {
     day = "Sunday";
-   }
-   dayDisplay.textContent = day; 
+  } else if (day == 1) {
+    day = "Monday";
+  } else if (day == 2) {
+    day = "Tuesday";
+  } else if (day == 3) {
+    day = "Wednesday";
+  } else if (day == 4) {
+    day = "Thrusday";
+  } else if (day == 5) {
+    day = "Friday";
+  } else if (day == 6) {
+    day = "Sunday";
+  }
+  dayDisplay.textContent = day;
 }
- setInterval(refreshTime, 1000);
+setInterval(refreshTime, 1000);
 
 /**
  * choose a random message from the fun collection
-*/
+ */
 function displayRandomquote() {
   db.collection("fun")
     .where("number", ">", Math.floor(Math.random() * 100))
@@ -92,7 +91,9 @@ function displayUrgentTodo() {
             var type = doc.data().type;
             var due = doc.data().due;
             var dueDate = new Date(due);
-            var inThreeDays = new Date(date.getTime() + 3 * 24 * 60 * 60 * 1000);
+            var inThreeDays = new Date(
+              date.getTime() + 3 * 24 * 60 * 60 * 1000
+            );
             console.log("now: " + date.getTime());
             console.log("due: " + dueDate.getTime());
             console.log("3 days from today: " + inThreeDays.getTime());
@@ -101,7 +102,7 @@ function displayUrgentTodo() {
               var todo =
                 "<p> " + courseName + " " + type + " : due on " + due + "</p>";
               $("#todo-go-here").append(todo);
-            } 
+            }
           });
         });
     }
@@ -109,7 +110,6 @@ function displayUrgentTodo() {
 }
 
 displayUrgentTodo();
-
 
 /**
  * Find next slot.
@@ -137,7 +137,7 @@ function findNextSlot() {
     case 5:
       prefix = "f";
       break;
-    default: 
+    default:
       prefix = "x";
       break;
   }
@@ -205,7 +205,6 @@ function findNextSlot() {
 }
 findNextSlot();
 
-
 /**
  * display next slot.
  */
@@ -225,8 +224,6 @@ function displayNextSlot() {
             "(Location: " +
             doc.data().location +
             ")";
-         
-
         } else if (doc.data().name == " ") {
           document.getElementById("upcoming-goes-here").innerHTML = "Break!";
         } else {
@@ -264,7 +261,7 @@ function findCurrentSlot() {
     case 5:
       prefix = "f";
       break;
-    default: 
+    default:
       prefix = "x";
       break;
   }
@@ -273,7 +270,7 @@ function findCurrentSlot() {
   var hour = date.getHours(); //returns 0-23
   var minutes = date.getMinutes(); //returns 0-59
 
-  //calculate the current slot 
+  //calculate the current slot
   if (hour == 8 && minutes < 30) {
     console.log("Get ready for the first class.");
   } else if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes < 30)) {
@@ -348,7 +345,6 @@ displayCurrentSlot();
 // This function is one-time thing for adding the data to database, so I commented out.
 // writeQuotes();
 
-
 /**
  * write ten messages to the fun collection, give each message a random number.
  */
@@ -402,4 +398,3 @@ function writefunMessages() {
   });
 }
 //writemessages();
-

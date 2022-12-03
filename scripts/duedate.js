@@ -1,30 +1,30 @@
-
 /**
  * deleteToDo takes currentDoc as a parameter. Current Doc is linked to a firebase document within the user's subcollection toDo. Delete function searches the
  * firebase until it finds a document that matches the parameter and then deletes. Page (dueDate) is then reloaded and then the user can see their now updated currents todo tasks.
  * @param {string} currentDoc - A variable contains a string
  */
- function deleteToDo(currentDoc) {
-
-  firebase.auth().onAuthStateChanged(function(user) {
+function deleteToDo(currentDoc) {
+  firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-      var status = confirm("Are you sure you want to delete?")
+      var status = confirm("Are you sure you want to delete?");
       if (status) {
-              var toDelete = db.collection('users').doc(user.uid).collection("toDo").where('id','==',
-              currentDoc);
-              toDelete.get().then(function(onSnapshot) {
-                  onSnapshot.forEach(function(doc) {
-                  doc.ref.delete();
-                  setTimeout(function(){
-                      location.reload();
-                   }, 500);
-                      })
-                  })
-              }
-          }
-          })
+        var toDelete = db
+          .collection("users")
+          .doc(user.uid)
+          .collection("toDo")
+          .where("id", "==", currentDoc);
+        toDelete.get().then(function (onSnapshot) {
+          onSnapshot.forEach(function (doc) {
+            doc.ref.delete();
+            setTimeout(function () {
+              location.reload();
+            }, 500);
+          });
+        });
       }
- 
+    }
+  });
+}
 
 /**
  * storeLocal takes currentDoc as a parameter and searches for its corresponding firebase document within the user's subcollection.

@@ -6,39 +6,148 @@ function writeschedules() {
   var schedulesRef = db.collection("schedules");
 
   schedulesRef.add({
-      set:"A",
-      mon:["ZpfiEkqWDwbeB7LjsEDF","QcNPKM0XNkFGVCGnXLDb","8sjYe3h7LHcq1WJIfNsZF","6MNrVY7T2C4rtH7azwDn","dDbRRob1YwL1BdJAYcxX","SYslQUQyGFIVpcBJKDOf","9tB2PSjkjJ3SEMwf4O7s","FfF3s2f1YpVypDxCV3qU","F2906OmXSKlAJDv9Ievc"],
-      thu:["aGbgVHS8WWPwbTBJYajf","Bbv6D4ReDMDPLmSPbD5u","6vJLAQS03a9I0RLvpkCV","cFSZZR6pX2Ypji4CGcG7","JGREKzEkfTcqTgm1yXh4","pMuJVo7YH1y4zICUx7Ri","b3GRJyHfi2uIQzSCsm4O","GHKh7594sRwe0XR5NJYD","dTdE5PDywN6VIYIhu816"],
-      last_updated: firebase.firestore.FieldValue.serverTimestamp()  
+    set: "A",
+    mon: [
+      "ZpfiEkqWDwbeB7LjsEDF",
+      "QcNPKM0XNkFGVCGnXLDb",
+      "8sjYe3h7LHcq1WJIfNsZF",
+      "6MNrVY7T2C4rtH7azwDn",
+      "dDbRRob1YwL1BdJAYcxX",
+      "SYslQUQyGFIVpcBJKDOf",
+      "9tB2PSjkjJ3SEMwf4O7s",
+      "FfF3s2f1YpVypDxCV3qU",
+      "F2906OmXSKlAJDv9Ievc",
+    ],
+    thu: [
+      "aGbgVHS8WWPwbTBJYajf",
+      "Bbv6D4ReDMDPLmSPbD5u",
+      "6vJLAQS03a9I0RLvpkCV",
+      "cFSZZR6pX2Ypji4CGcG7",
+      "JGREKzEkfTcqTgm1yXh4",
+      "pMuJVo7YH1y4zICUx7Ri",
+      "b3GRJyHfi2uIQzSCsm4O",
+      "GHKh7594sRwe0XR5NJYD",
+      "dTdE5PDywN6VIYIhu816",
+    ],
+    last_updated: firebase.firestore.FieldValue.serverTimestamp(),
   });
   schedulesRef.add({
-      set:"B",
-      tue:["NTGvRSPOHdTNqhp9vcZg","Fw5DK9XfceI9tNKMgpVP","wDAMfOZUa0d5g0A06IMF","BPGmN54oq9OVUrhq5yKB","k7OGOJn9lAqIdzDNexfZ","79NrMwTMwN3l6o8iIx4d","AdfQYQVax2jB7RvT9BSA","DvUpPYXGLOBplySuJLso","GpiEy8inFvsCrvuuVfT7"],
-      fri:["QNv83O7bAJilpwGxeXGU","IXtQMcNULmmgrlBZsSgZ","CKEepuROGAP0KtTel38U","uKqmW1QoblvnAVJX8RN6","9BM2bbjCMBk9bjnmUOR4","KiZt3ergH6OhYGggVmkli","f90RzhEGKrfBWWBphw2s","6xIu6u1Zwio7gqPbOkwu","XCL2VQcxWCBYndS0wVNH"],
-      last_updated: firebase.firestore.FieldValue.serverTimestamp()  
- });
- schedulesRef.add({
-      set:"C",
-      wed:["EMFaaqvVfvfQ7dxjQmYc","kSwUvCw3CPY7wIWVXKgo","rXIipTastQn3S8vMQBOY","uMnAMIVQfTUi19aWKJHW","Bg39z56QsB28oCvLIx4g","1gxlzgeQkIYTpkJEejTW","WpepNCPgqnCl1nuAFh98","i6AWzxWq0xiHrw05uBhD","nDlNVmTVDpFZhMtbm8x3"],
-      thu:["aGbgVHS8WWPwbTBJYajf","Bbv6D4ReDMDPLmSPbD5u","6vJLAQS03a9I0RLvpkCV","cFSZZR6pX2Ypji4CGcG7","JGREKzEkfTcqTgm1yXh4","pMuJVo7YH1y4zICUx7Ri","b3GRJyHfi2uIQzSCsm4O","GHKh7594sRwe0XR5NJYD","dTdE5PDywN6VIYIhu816"],
-        last_updated: firebase.firestore.FieldValue.serverTimestamp()  
- });
- schedulesRef.add({
-      set:"D",
-      tue:["NTGvRSPOHdTNqhp9vcZg","Fw5DK9XfceI9tNKMgpVP","wDAMfOZUa0d5g0A06IMF","BPGmN54oq9OVUrhq5yKB","k7OGOJn9lAqIdzDNexfZ","79NrMwTMwN3l6o8iIx4d","AdfQYQVax2jB7RvT9BSA","DvUpPYXGLOBplySuJLso","GpiEy8inFvsCrvuuVfT7"],
-      thu:["aGbgVHS8WWPwbTBJYajf","Bbv6D4ReDMDPLmSPbD5u","6vJLAQS03a9I0RLvpkCV","cFSZZR6pX2Ypji4CGcG7","JGREKzEkfTcqTgm1yXh4","pMuJVo7YH1y4zICUx7Ri","b3GRJyHfi2uIQzSCsm4O","GHKh7594sRwe0XR5NJYD","dTdE5PDywN6VIYIhu816"],   
-      last_updated: firebase.firestore.FieldValue.serverTimestamp()   
-});
+    set: "B",
+    tue: [
+      "NTGvRSPOHdTNqhp9vcZg",
+      "Fw5DK9XfceI9tNKMgpVP",
+      "wDAMfOZUa0d5g0A06IMF",
+      "BPGmN54oq9OVUrhq5yKB",
+      "k7OGOJn9lAqIdzDNexfZ",
+      "79NrMwTMwN3l6o8iIx4d",
+      "AdfQYQVax2jB7RvT9BSA",
+      "DvUpPYXGLOBplySuJLso",
+      "GpiEy8inFvsCrvuuVfT7",
+    ],
+    fri: [
+      "QNv83O7bAJilpwGxeXGU",
+      "IXtQMcNULmmgrlBZsSgZ",
+      "CKEepuROGAP0KtTel38U",
+      "uKqmW1QoblvnAVJX8RN6",
+      "9BM2bbjCMBk9bjnmUOR4",
+      "KiZt3ergH6OhYGggVmkli",
+      "f90RzhEGKrfBWWBphw2s",
+      "6xIu6u1Zwio7gqPbOkwu",
+      "XCL2VQcxWCBYndS0wVNH",
+    ],
+    last_updated: firebase.firestore.FieldValue.serverTimestamp(),
+  });
+  schedulesRef.add({
+    set: "C",
+    wed: [
+      "EMFaaqvVfvfQ7dxjQmYc",
+      "kSwUvCw3CPY7wIWVXKgo",
+      "rXIipTastQn3S8vMQBOY",
+      "uMnAMIVQfTUi19aWKJHW",
+      "Bg39z56QsB28oCvLIx4g",
+      "1gxlzgeQkIYTpkJEejTW",
+      "WpepNCPgqnCl1nuAFh98",
+      "i6AWzxWq0xiHrw05uBhD",
+      "nDlNVmTVDpFZhMtbm8x3",
+    ],
+    thu: [
+      "aGbgVHS8WWPwbTBJYajf",
+      "Bbv6D4ReDMDPLmSPbD5u",
+      "6vJLAQS03a9I0RLvpkCV",
+      "cFSZZR6pX2Ypji4CGcG7",
+      "JGREKzEkfTcqTgm1yXh4",
+      "pMuJVo7YH1y4zICUx7Ri",
+      "b3GRJyHfi2uIQzSCsm4O",
+      "GHKh7594sRwe0XR5NJYD",
+      "dTdE5PDywN6VIYIhu816",
+    ],
+    last_updated: firebase.firestore.FieldValue.serverTimestamp(),
+  });
+  schedulesRef.add({
+    set: "D",
+    tue: [
+      "NTGvRSPOHdTNqhp9vcZg",
+      "Fw5DK9XfceI9tNKMgpVP",
+      "wDAMfOZUa0d5g0A06IMF",
+      "BPGmN54oq9OVUrhq5yKB",
+      "k7OGOJn9lAqIdzDNexfZ",
+      "79NrMwTMwN3l6o8iIx4d",
+      "AdfQYQVax2jB7RvT9BSA",
+      "DvUpPYXGLOBplySuJLso",
+      "GpiEy8inFvsCrvuuVfT7",
+    ],
+    thu: [
+      "aGbgVHS8WWPwbTBJYajf",
+      "Bbv6D4ReDMDPLmSPbD5u",
+      "6vJLAQS03a9I0RLvpkCV",
+      "cFSZZR6pX2Ypji4CGcG7",
+      "JGREKzEkfTcqTgm1yXh4",
+      "pMuJVo7YH1y4zICUx7Ri",
+      "b3GRJyHfi2uIQzSCsm4O",
+      "GHKh7594sRwe0XR5NJYD",
+      "dTdE5PDywN6VIYIhu816",
+    ],
+    last_updated: firebase.firestore.FieldValue.serverTimestamp(),
+  });
 }
 
 function updateSchedule() {
   var schedulesRef = db.collection("schedules").doc("FRh9ArJ2wyzmJUWky0Vy");
-  schedulesRef
-  .update({
-      mon: ["ZpfiEkqWDwbeB7LjsEDF", "QcNPKM0XNkFGVCGnXLDb", "8sjYe3h7LHcq1WJIfNsZ", "6MNrVY7T2C4rtH7azwDn", "dDbRRob1YwL1BdJAYcxX", "SYslQUQyGFIVpcBJKDOf", "9tB2PSjkjJ3SEMwf4O7s", "FfF3s2f1YpVypDxCV3qU", "F2906OmXSKlAJDv9Ievc"],
-      wed: ["EMFaaqvVfvfQ7dxjQmYc","kSwUvCw3CPY7wIWVXKgo", "rXIipTastQn3S8vMQBOY", "uMnAMIVQfTUi19aWKJHW", "Bg39z56QsB28oCvLIx4g", "1gxlzgeQkIYTpkJEejTW", "WpepNCPgqnCl1nuAFh98", "i6AWzxWq0xiHrw05uBhD", "nDlNVmTVDpFZhMtbm8x3"],
-      fri: ["QNv83O7bAJilpwGxeXGU", "IXtQMcNULmmgrlBZsSgZ", "CKEepuROGAP0KtTel38U", "uKqmW1QoblvnAVJX8RN6", "9BM2bbjCMBk9bjnmUOR4", "KiZt3ergH6OhYGggVmkl", "f90RzhEGKrfBWWBphw2s", "6xIu6u1Zwio7gqPbOkwu", "XCL2VQcxWCBYndS0wVNH"]
-  });    
+  schedulesRef.update({
+    mon: [
+      "ZpfiEkqWDwbeB7LjsEDF",
+      "QcNPKM0XNkFGVCGnXLDb",
+      "8sjYe3h7LHcq1WJIfNsZ",
+      "6MNrVY7T2C4rtH7azwDn",
+      "dDbRRob1YwL1BdJAYcxX",
+      "SYslQUQyGFIVpcBJKDOf",
+      "9tB2PSjkjJ3SEMwf4O7s",
+      "FfF3s2f1YpVypDxCV3qU",
+      "F2906OmXSKlAJDv9Ievc",
+    ],
+    wed: [
+      "EMFaaqvVfvfQ7dxjQmYc",
+      "kSwUvCw3CPY7wIWVXKgo",
+      "rXIipTastQn3S8vMQBOY",
+      "uMnAMIVQfTUi19aWKJHW",
+      "Bg39z56QsB28oCvLIx4g",
+      "1gxlzgeQkIYTpkJEejTW",
+      "WpepNCPgqnCl1nuAFh98",
+      "i6AWzxWq0xiHrw05uBhD",
+      "nDlNVmTVDpFZhMtbm8x3",
+    ],
+    fri: [
+      "QNv83O7bAJilpwGxeXGU",
+      "IXtQMcNULmmgrlBZsSgZ",
+      "CKEepuROGAP0KtTel38U",
+      "uKqmW1QoblvnAVJX8RN6",
+      "9BM2bbjCMBk9bjnmUOR4",
+      "KiZt3ergH6OhYGggVmkl",
+      "f90RzhEGKrfBWWBphw2s",
+      "6xIu6u1Zwio7gqPbOkwu",
+      "XCL2VQcxWCBYndS0wVNH",
+    ],
+  });
 }
 
 /**
@@ -415,7 +524,7 @@ function writeCourses() {
 //WriteCourses end
 
 /**
- * This function reads the course schedule from the Firestore using 'course' and 'schedule' collection. 
+ * This function reads the course schedule from the Firestore using 'course' and 'schedule' collection.
  */
 function readSchedule() {
   db.collection("schedules")
@@ -423,7 +532,7 @@ function readSchedule() {
     .get()
     .then((timetable) => {
       timetable.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());    //Shows the document id that satisfies where() condition on console.
+        console.log(doc.id, " => ", doc.data()); //Shows the document id that satisfies where() condition on console.
 
         //Reads the schedule for Monday.
         for (let i = 0; i < 9; i++) {
@@ -443,7 +552,7 @@ function readSchedule() {
                 doc.data().location;
             });
         }
-//Reads the schedule for Tuesday.
+        //Reads the schedule for Tuesday.
         for (let i = 0; i < 9; i++) {
           var courseID = doc.data().tue[i];
           console.log(courseID);
@@ -461,7 +570,7 @@ function readSchedule() {
                 doc.data().location;
             });
         }
-//Reads the schedule for Wednesday.
+        //Reads the schedule for Wednesday.
         for (let i = 0; i < 9; i++) {
           var courseID = doc.data().wed[i];
           console.log(courseID);
@@ -479,7 +588,7 @@ function readSchedule() {
                 doc.data().location;
             });
         }
-//Reads the schedule for Thursday.
+        //Reads the schedule for Thursday.
         for (let i = 0; i < 9; i++) {
           var courseID = doc.data().thu[i];
           console.log(courseID);
@@ -497,7 +606,7 @@ function readSchedule() {
                 doc.data().location;
             });
         }
-//Reads the schedule for Friday.
+        //Reads the schedule for Friday.
         for (let i = 0; i < 9; i++) {
           var courseID = doc.data().fri[i];
           console.log(courseID);
@@ -514,12 +623,9 @@ function readSchedule() {
                 "\n" +
                 doc.data().location;
             });
-        }    
+        }
       });
     });
 }
 
 readSchedule(); //calling the function
-
-
-
