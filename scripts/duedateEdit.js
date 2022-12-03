@@ -55,7 +55,7 @@ function saveEdit() {
           details: details,
         })
         .then(() => {
-          location.replace("duedate.html");
+          location.replace("/html/duedate.html");
         });
     }
   });

@@ -30,7 +30,7 @@ function addToDo() {
             details: taskDetails,
             id: id,
           });
-          window.location.replace("duedate.html");
+          window.location.replace("/html/duedate.html");
         });
     }
   });

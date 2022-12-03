@@ -54,7 +54,7 @@ function storelocal(currentDoc) {
           localStorage.setItem("id", currentDoc);
 
           console.log(course, type, due, details);
-          window.location.replace("duedateEdit.html");
+          window.location.replace("/html/duedateEdit.html");
         });
     }
   });
