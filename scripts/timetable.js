@@ -41,7 +41,9 @@ function updateSchedule() {
   });    
 }
 
-//Write courses start
+/**
+ * This function writes the courses on the Firestore.
+ */
 function writeCourses() {
   //define a variable for the collection you want to create in Firestore to populate data
   var courseRef = db.collection("courses");
